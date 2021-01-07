@@ -780,6 +780,9 @@ public class WxOrderService {
         // 取消订单超时未支付任务
         taskService.removeTask(new OrderUnpaidTask(order.getId()));
 
+        //todo:增加用户积分
+
+
         return WxPayNotifyResponse.success("处理成功!");
     }
 

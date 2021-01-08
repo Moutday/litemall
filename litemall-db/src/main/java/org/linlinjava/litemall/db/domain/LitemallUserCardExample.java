@@ -399,7 +399,7 @@ public class LitemallUserCardExample {
             return (Criteria) this;
         }
 
-        public Criteria andCardLevelEqualTo(Byte value) {
+        public Criteria andCardLevelEqualTo(Integer value) {
             addCriterion("card_level =", value, "cardLevel");
             return (Criteria) this;
         }

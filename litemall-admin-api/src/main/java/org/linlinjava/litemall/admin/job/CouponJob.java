@@ -67,7 +67,7 @@ public class CouponJob {
         LocalDateTime firstDayTime = DateUtil.getFirstDayTimeOfMonth();
         LocalDateTime endDayTime = DateUtil.getEndDayTimeOfMonth();
         cardList.forEach(card->{
-            List<LitemallUser> userList =  userService.queryByCardId(card.getId());
+            List<LitemallUser> userList =  userService.queryByCardLevel(card.getCardLevel());
             if(userList != null && card.getVipMonthCoupon() != null){
                     userList.forEach(user->{
                         String[] couponIds = card.getVipMonthCoupon().split(",");

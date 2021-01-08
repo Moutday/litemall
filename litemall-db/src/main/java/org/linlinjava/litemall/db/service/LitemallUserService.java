@@ -80,9 +80,9 @@ public class LitemallUserService {
         return userMapper.selectByExample(example);
     }
 
-    public List<LitemallUser> queryByCardId(int cardId) {
+    public List<LitemallUser> queryByCardLevel(int cardLevel) {
         LitemallUserExample example = new LitemallUserExample();
-        example.or().andCardIdEqualTo(cardId).andDeletedEqualTo(false);
+        example.or().andCardLevelEqualTo(cardLevel).andDeletedEqualTo(false);
         return userMapper.selectByExample(example);
     }
 

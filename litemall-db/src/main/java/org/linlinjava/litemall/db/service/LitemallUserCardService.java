@@ -22,10 +22,12 @@ public class LitemallUserCardService {
         return userCardMapper.selectByPrimaryKey(cardId);
     }
 
-    public LitemallUserCard findUserCodeVoById(Integer cardId) {
-        LitemallUserCard userCard = findById(cardId);
-        return userCard;
+    public LitemallUserCard findByCardLevel(Integer level) {
+        LitemallUserCardExample example = new LitemallUserCardExample();
+        example.or().andCardLevelEqualTo(level).andDeletedEqualTo(false);
+        return userCardMapper.selectOneByExample(example);
     }
+
 
 
     public void add(LitemallUserCard userCard) {

@@ -794,7 +794,7 @@ public class WxOrderService {
     //到达段积分 升级用户
     private void givePointToUser(LitemallOrder order){
         LitemallUser user = userService.findById(order.getUserId());
-        LitemallUserCard card = userCardService.findById(user.getCardId());
+        LitemallUserCard card = userCardService.findByCardLevel(user.getCardLevel());
         LitemallUserPointDetail userPointDetail = new LitemallUserPointDetail();
         Integer addPoint = Integer.parseInt(order.getActualPrice().toString()) * card.getMultiple();
 
@@ -811,7 +811,7 @@ public class WxOrderService {
         cardList.forEach(c->
         {
             if(user.getPoint() >= card.getPointBegin() && user.getPoint() <= card.getPointEnd()){
-                user.setCardId(card.getId());
+                user.setCardLevel(card.getCardLevel());
             }
         });
     }

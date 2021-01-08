@@ -37,7 +37,7 @@ public class LitemallUserCard {
      *
      * @mbg.generated
      */
-    private Byte cardLevel;
+    private Integer cardLevel;
 
     /**
      *
@@ -152,7 +152,7 @@ public class LitemallUserCard {
      *
      * @mbg.generated
      */
-    public Byte getCardLevel() {
+    public Integer getCardLevel() {
         return cardLevel;
     }
 
@@ -164,7 +164,7 @@ public class LitemallUserCard {
      *
      * @mbg.generated
      */
-    public void setCardLevel(Byte cardLevel) {
+    public void setCardLevel(Integer cardLevel) {
         this.cardLevel = cardLevel;
     }
 

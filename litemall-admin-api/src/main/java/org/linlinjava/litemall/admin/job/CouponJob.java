@@ -2,16 +2,22 @@ package org.linlinjava.litemall.admin.job;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.linlinjava.litemall.admin.util.DateUtil;
 import org.linlinjava.litemall.db.domain.LitemallCoupon;
 import org.linlinjava.litemall.db.domain.LitemallCouponUser;
+import org.linlinjava.litemall.db.domain.LitemallUser;
+import org.linlinjava.litemall.db.domain.LitemallUserCard;
 import org.linlinjava.litemall.db.service.LitemallCouponService;
 import org.linlinjava.litemall.db.service.LitemallCouponUserService;
+import org.linlinjava.litemall.db.service.LitemallUserCardService;
+import org.linlinjava.litemall.db.service.LitemallUserService;
 import org.linlinjava.litemall.db.util.CouponConstant;
 import org.linlinjava.litemall.db.util.CouponUserConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -25,6 +31,10 @@ public class CouponJob {
     private LitemallCouponService couponService;
     @Autowired
     private LitemallCouponUserService couponUserService;
+    @Autowired
+    private LitemallUserCardService userCardService;
+    @Autowired
+    private LitemallUserService userService;
 
     /**
      * 每隔一个小时检查
@@ -50,4 +60,28 @@ public class CouponJob {
         logger.info("系统结束任务检查优惠券是否已经过期");
     }
 
+    // 每月1号 按用户等级 发放优惠券 todo：定时任务时间更改
+    @Scheduled(fixedDelay = 60 * 60 * 1000)
+    public void giveCouponForVip(){
+        List<LitemallUserCard> cardList = userCardService.querySelective(null,0,"","");
+        LocalDateTime firstDayTime = DateUtil.getFirstDayTimeOfMonth();
+        LocalDateTime endDayTime = DateUtil.getEndDayTimeOfMonth();
+        cardList.forEach(card->{
+            List<LitemallUser> userList =  userService.queryByCardId(card.getId());
+            if(userList != null && card.getVipMonthCoupon() != null){
+                    userList.forEach(user->{
+                        String[] couponIds = card.getVipMonthCoupon().split(",");
+                        for(String couponId : couponIds){
+                            LitemallCouponUser couponUser = new LitemallCouponUser();
+                            couponUser.setUserId(user.getId());
+                            couponUser.setCouponId(Integer.parseInt(couponId));
+                            couponUser.setStartTime(firstDayTime);
+                            couponUser.setEndTime(endDayTime);
+                            couponUserService.add(couponUser);
+                        }
+                    });
+                }
+            }
+        );
+    }
 }

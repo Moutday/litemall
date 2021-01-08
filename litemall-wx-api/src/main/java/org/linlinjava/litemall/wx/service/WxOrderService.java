@@ -107,6 +107,12 @@ public class WxOrderService {
     private TaskService taskService;
     @Autowired
     private LitemallAftersaleService aftersaleService;
+    @Autowired
+    private LitemallUserPointDetailService userPointDetailService;
+    @Autowired
+    private LitemallUserCardService userCardService;
+
+
 
     /**
      * 订单列表
@@ -780,10 +786,34 @@ public class WxOrderService {
         // 取消订单超时未支付任务
         taskService.removeTask(new OrderUnpaidTask(order.getId()));
 
-        //todo:增加用户积分
-
-
+        givePointToUser(order);
         return WxPayNotifyResponse.success("处理成功!");
+    }
+
+    //判断用户等级 增加积分
+    //到达段积分 升级用户
+    private void givePointToUser(LitemallOrder order){
+        LitemallUser user = userService.findById(order.getUserId());
+        LitemallUserCard card = userCardService.findById(user.getCardId());
+        LitemallUserPointDetail userPointDetail = new LitemallUserPointDetail();
+        Integer addPoint = Integer.parseInt(order.getActualPrice().toString()) * card.getMultiple();
+
+        userPointDetail.setOrderId(order.getId());
+        userPointDetail.setPoint(addPoint);
+        userPointDetail.setUserId(order.getUserId());
+        userPointDetailService.add(userPointDetail);
+
+        user.setPoint(user.getPoint() + addPoint);
+        userService.updateById(user);
+
+        //升级用户会员等级
+        List<LitemallUserCard> cardList = userCardService.querySelective(null,0,"","");
+        cardList.forEach(c->
+        {
+            if(user.getPoint() >= card.getPointBegin() && user.getPoint() <= card.getPointEnd()){
+                user.setCardId(card.getId());
+            }
+        });
     }
 
     /**

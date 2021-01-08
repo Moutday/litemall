@@ -61,8 +61,9 @@ public class LitemallUserService {
         if (!StringUtils.isEmpty(sort) && !StringUtils.isEmpty(order)) {
             example.setOrderByClause(sort + " " + order);
         }
-
-        PageHelper.startPage(page, size);
+        if(page != null){
+            PageHelper.startPage(page, size);
+        }
         return userMapper.selectByExample(example);
     }
 
@@ -76,6 +77,12 @@ public class LitemallUserService {
     public List<LitemallUser> queryByUsername(String username) {
         LitemallUserExample example = new LitemallUserExample();
         example.or().andUsernameEqualTo(username).andDeletedEqualTo(false);
+        return userMapper.selectByExample(example);
+    }
+
+    public List<LitemallUser> queryByCardId(int cardId) {
+        LitemallUserExample example = new LitemallUserExample();
+        example.or().andCardIdEqualTo(cardId).andDeletedEqualTo(false);
         return userMapper.selectByExample(example);
     }
 

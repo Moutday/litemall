@@ -1,22 +1,22 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
+Source Server         : localhost
 Source Server Version : 50726
-Source Host           : 127.0.0.1:3306
+Source Host           : localhost:3306
 Source Database       : litemall
 
 Target Server Type    : MYSQL
 Target Server Version : 50726
 File Encoding         : 65001
 
-Date: 2021-01-06 22:35:23
+Date: 2021-01-08 19:47:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for `litemall_ad`
+-- Table structure for litemall_ad
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_ad`;
 CREATE TABLE `litemall_ad` (
@@ -44,7 +44,7 @@ INSERT INTO `litemall_ad` VALUES ('2', '活动 美食节', '', 'http://yanxuan.n
 INSERT INTO `litemall_ad` VALUES ('3', '活动 母亲节', '', 'http://yanxuan.nosdn.127.net/8e50c65fda145e6dd1bf4fb7ee0fcecc.jpg', '1', '活动 母亲节5', null, null, '1', '2018-02-01 00:00:00', '2018-02-01 00:00:00', '0');
 
 -- ----------------------------
--- Table structure for `litemall_address`
+-- Table structure for litemall_address
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_address`;
 CREATE TABLE `litemall_address` (
@@ -72,7 +72,7 @@ CREATE TABLE `litemall_address` (
 INSERT INTO `litemall_address` VALUES ('2', '吴大大', '3', '广东省', '广州市', '增城区', '001', '440118', null, '15800011111', '1', '2020-12-14 16:02:26', '2020-12-14 16:02:26', '0');
 
 -- ----------------------------
--- Table structure for `litemall_admin`
+-- Table structure for litemall_admin
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_admin`;
 CREATE TABLE `litemall_admin` (
@@ -97,7 +97,7 @@ INSERT INTO `litemall_admin` VALUES ('4', 'promotion123', '$2a$10$wDZLOLLnzZ1EFZ
 INSERT INTO `litemall_admin` VALUES ('5', 'mall123', '$2a$10$aCtsc4rG6KmxQ59.IkYse.oRyKuwQoU2CPCmxSdB.d5nXq6aw/z4O', '', null, 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif', '2019-01-07 15:17:25', '2019-01-07 15:21:05', '0', '[2]');
 
 -- ----------------------------
--- Table structure for `litemall_aftersale`
+-- Table structure for litemall_aftersale
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_aftersale`;
 CREATE TABLE `litemall_aftersale` (
@@ -123,7 +123,7 @@ CREATE TABLE `litemall_aftersale` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `litemall_brand`
+-- Table structure for litemall_brand
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_brand`;
 CREATE TABLE `litemall_brand` (
@@ -193,7 +193,7 @@ INSERT INTO `litemall_brand` VALUES ('1041000', 'BCBG制造商', '严选从产�
 INSERT INTO `litemall_brand` VALUES ('1046000', 'Police制造商', '严选团队选定Police品牌制造商合作，\n有11年眼镜生产资质，兼顾品质与品味，\n为你带来专业时尚的墨镜。', 'http://yanxuan.nosdn.127.net/66e2cb956a9dd1efc7732bea278e901e.png', '6', '109.00', '2018-02-01 00:00:00', '2018-02-01 00:00:00', '0');
 
 -- ----------------------------
--- Table structure for `litemall_cart`
+-- Table structure for litemall_cart
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_cart`;
 CREATE TABLE `litemall_cart` (
@@ -222,7 +222,7 @@ INSERT INTO `litemall_cart` VALUES ('3', '3', '1127047', '1127047', '趣味粉�
 INSERT INTO `litemall_cart` VALUES ('4', '3', '1152031', '1152031', '魔兽世界-伊利丹颈枕眼罩套装', '234', '99.00', '2', '[\"标准\"]', '1', 'http://yanxuan.nosdn.127.net/fd6e78a397bd9e9804116a36f0270b0a.png', '2020-12-14 17:09:40', '2020-12-14 17:09:40', '1');
 
 -- ----------------------------
--- Table structure for `litemall_category`
+-- Table structure for litemall_category
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_category`;
 CREATE TABLE `litemall_category` (
@@ -340,7 +340,7 @@ INSERT INTO `litemall_category` VALUES ('1036003', '调味', '', '烹饪必备�
 INSERT INTO `litemall_category` VALUES ('1036004', '大话西游', '', '大话西游正版周边', '1019000', 'http://yanxuan.nosdn.127.net/b60618db213322bdc2c5b1208655bd7e.png', 'http://yanxuan.nosdn.127.net/470a017f508e9a18f3068be7b315e14b.png', 'L2', '9', '2018-02-01 00:00:00', '2018-02-01 00:00:00', '0');
 
 -- ----------------------------
--- Table structure for `litemall_collect`
+-- Table structure for litemall_collect
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_collect`;
 CREATE TABLE `litemall_collect` (
@@ -361,7 +361,7 @@ CREATE TABLE `litemall_collect` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `litemall_comment`
+-- Table structure for litemall_comment
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_comment`;
 CREATE TABLE `litemall_comment` (
@@ -1390,7 +1390,7 @@ INSERT INTO `litemall_comment` VALUES ('1013', '1012', '2', 'fffff', '', '0', '0
 INSERT INTO `litemall_comment` VALUES ('1014', '1011', '2', 'fffff', '', '0', '0', '[]', '0', '2020-02-10 21:41:25', '2020-02-10 21:41:25', '0');
 
 -- ----------------------------
--- Table structure for `litemall_coupon`
+-- Table structure for litemall_coupon
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_coupon`;
 CREATE TABLE `litemall_coupon` (
@@ -1427,7 +1427,7 @@ INSERT INTO `litemall_coupon` VALUES ('3', '新用户优惠券', '全场通用',
 INSERT INTO `litemall_coupon` VALUES ('8', '可兑换优惠券', '全场通用', '仅兑换领券', '0', '15.00', '99.00', '1', '2', '0', '0', '[]', 'DC6FF8SE', '0', '7', null, null, '2018-12-23 09:29:57', '2018-12-23 09:29:57', '0');
 
 -- ----------------------------
--- Table structure for `litemall_coupon_user`
+-- Table structure for litemall_coupon_user
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_coupon_user`;
 CREATE TABLE `litemall_coupon_user` (
@@ -1451,7 +1451,7 @@ CREATE TABLE `litemall_coupon_user` (
 INSERT INTO `litemall_coupon_user` VALUES ('3', '3', '3', '0', '2020-12-14 17:09:44', '2020-12-14 16:00:25', '2020-12-24 16:00:25', '2', '2020-12-14 16:00:25', '2020-12-14 17:39:44', '0');
 
 -- ----------------------------
--- Table structure for `litemall_feedback`
+-- Table structure for litemall_feedback
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_feedback`;
 CREATE TABLE `litemall_feedback` (
@@ -1476,7 +1476,7 @@ CREATE TABLE `litemall_feedback` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `litemall_footprint`
+-- Table structure for litemall_footprint
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_footprint`;
 CREATE TABLE `litemall_footprint` (
@@ -1499,7 +1499,7 @@ INSERT INTO `litemall_footprint` VALUES ('4', '3', '1127047', '2020-12-14 16:01:
 INSERT INTO `litemall_footprint` VALUES ('5', '3', '1152031', '2020-12-14 17:09:36', '2020-12-14 17:09:36', '0');
 
 -- ----------------------------
--- Table structure for `litemall_goods`
+-- Table structure for litemall_goods
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_goods`;
 CREATE TABLE `litemall_goods` (
@@ -1775,7 +1775,7 @@ INSERT INTO `litemall_goods` VALUES ('1166008', '1166008', 'Carat钻石 不粘�
 INSERT INTO `litemall_goods` VALUES ('1181000', '1181000', '母亲节礼物-舒适安睡组合', '1008008', '1001020', '[\"http://yanxuan.nosdn.127.net/355efbcc32981aa3b7869ca07ee47dac.jpg\", \"http://yanxuan.nosdn.127.net/43e283df216881037b70d8b34f8846d3.jpg\", \"http://yanxuan.nosdn.127.net/12e41d7e5dabaf9150a8bb45c41cf422.jpg\", \"http://yanxuan.nosdn.127.net/5c1d28e86ccb89980e6054a49571cdec.jpg\"]', '', '安心舒适是最好的礼物', '1', '1', 'http://yanxuan.nosdn.127.net/1f67b1970ee20fd572b7202da0ff705d.png', '', '1', '0', '件', '2618.00', '2598.00', '<p><img src=\"http://yanxuan.nosdn.127.net/3ddfe10db43f7df33ba82ae7570ada80.jpg\" _src=\"http://yanxuan.nosdn.127.net/3ddfe10db43f7df33ba82ae7570ada80.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/7682b7930b4776ce032f509c24a74a1e.jpg\" _src=\"http://yanxuan.nosdn.127.net/7682b7930b4776ce032f509c24a74a1e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/e0bb6a50e27681925c5bb26bceb67ef4.jpg\" _src=\"http://yanxuan.nosdn.127.net/e0bb6a50e27681925c5bb26bceb67ef4.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/ba63b244c74ce06fda82bb6a29cc0f71.jpg\" _src=\"http://yanxuan.nosdn.127.net/ba63b244c74ce06fda82bb6a29cc0f71.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/3c7808c3a4769bad5af4974782f08654.jpg\" _src=\"http://yanxuan.nosdn.127.net/3c7808c3a4769bad5af4974782f08654.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/71798aaac23a91fdab4d77e1b980a4df.jpg\" _src=\"http://yanxuan.nosdn.127.net/71798aaac23a91fdab4d77e1b980a4df.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c88cbb2dd2310b732571f49050fe4059.jpg\" _src=\"http://yanxuan.nosdn.127.net/c88cbb2dd2310b732571f49050fe4059.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/5dfdcd654e0f3076f7c05dd9c19c15ea.jpg\" _src=\"http://yanxuan.nosdn.127.net/5dfdcd654e0f3076f7c05dd9c19c15ea.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/bd55d6ef7af69422d8d76af10ee70156.jpg\" _src=\"http://yanxuan.nosdn.127.net/bd55d6ef7af69422d8d76af10ee70156.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/bae571b22954c521b35e446d652edc1d.jpg\" _src=\"http://yanxuan.nosdn.127.net/bae571b22954c521b35e446d652edc1d.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/e709c4d9e46d602a4d2125e47110f6ae.jpg\" _src=\"http://yanxuan.nosdn.127.net/e709c4d9e46d602a4d2125e47110f6ae.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/83e41915035c418db177af8b1eca385c.jpg\" _src=\"http://yanxuan.nosdn.127.net/83e41915035c418db177af8b1eca385c.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/f42c561e6935fe3e0e0873653da78670.jpg\" _src=\"http://yanxuan.nosdn.127.net/f42c561e6935fe3e0e0873653da78670.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/8317726fbae80b98764dc4c6233a913e.jpg\" _src=\"http://yanxuan.nosdn.127.net/8317726fbae80b98764dc4c6233a913e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/ba904b7c948b8015db2171435325270f.jpg\" _src=\"http://yanxuan.nosdn.127.net/ba904b7c948b8015db2171435325270f.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/4969c73d0d8f29bffb69529c96ca4889.jpg\" _src=\"http://yanxuan.nosdn.127.net/4969c73d0d8f29bffb69529c96ca4889.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/d80b9b8c5c31031d1cd5357e48748632.jpg\" _src=\"http://yanxuan.nosdn.127.net/d80b9b8c5c31031d1cd5357e48748632.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/3fe79bdae40662a7b1feed3179d3dd1f.jpg\" _src=\"http://yanxuan.nosdn.127.net/3fe79bdae40662a7b1feed3179d3dd1f.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/79eef059963b12479f65e782d1dca128.jpg\" _src=\"http://yanxuan.nosdn.127.net/79eef059963b12479f65e782d1dca128.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/e5a8f64f4297ccc01b41df98b0f252c8.jpg\" _src=\"http://yanxuan.nosdn.127.net/e5a8f64f4297ccc01b41df98b0f252c8.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/a940b9e9525c4861407e4c3b07b02977.jpg\" _src=\"http://yanxuan.nosdn.127.net/a940b9e9525c4861407e4c3b07b02977.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/224b8b81cbe12e4ad060a50f1e26601a.jpg\" _src=\"http://yanxuan.nosdn.127.net/224b8b81cbe12e4ad060a50f1e26601a.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/85e151647452fad718effb7b1adc18e2.jpg\" _src=\"http://yanxuan.nosdn.127.net/85e151647452fad718effb7b1adc18e2.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/d47444ff3bb9dc0aa4ab1f9b84d83768.jpg\" _src=\"http://yanxuan.nosdn.127.net/d47444ff3bb9dc0aa4ab1f9b84d83768.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/136262743f0c849cc0c55c8e7963dd7e.jpg\" _src=\"http://yanxuan.nosdn.127.net/136262743f0c849cc0c55c8e7963dd7e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/331a97cbaff5b25a3b08ed7cdfe29df9.jpg\" _src=\"http://yanxuan.nosdn.127.net/331a97cbaff5b25a3b08ed7cdfe29df9.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/89b450aa0a8afe1db566dcad926f1fe8.jpg\" _src=\"http://yanxuan.nosdn.127.net/89b450aa0a8afe1db566dcad926f1fe8.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c1cf94f13b7280a97e751cebe573fa78.jpg\" _src=\"http://yanxuan.nosdn.127.net/c1cf94f13b7280a97e751cebe573fa78.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/1822c23def83b77e7607c24237eeec74.jpg\" _src=\"http://yanxuan.nosdn.127.net/1822c23def83b77e7607c24237eeec74.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/2af234312b3914d6d0bc316f92134614.jpg\" _src=\"http://yanxuan.nosdn.127.net/2af234312b3914d6d0bc316f92134614.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c4f8ab2b3813275d954a8bedcf902d26.jpg\" _src=\"http://yanxuan.nosdn.127.net/c4f8ab2b3813275d954a8bedcf902d26.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/42f18842ff0c92ed849c4401ae47bb61.jpg\" _src=\"http://yanxuan.nosdn.127.net/42f18842ff0c92ed849c4401ae47bb61.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/a8ea64a35799e50ab31ecb65345fe8f4.jpg\" _src=\"http://yanxuan.nosdn.127.net/a8ea64a35799e50ab31ecb65345fe8f4.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/18759fa90cd153bdd744280807c3c155.jpg\" _src=\"http://yanxuan.nosdn.127.net/18759fa90cd153bdd744280807c3c155.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/431f00d068a8e747959deb3b7bdd495a.jpg\" _src=\"http://yanxuan.nosdn.127.net/431f00d068a8e747959deb3b7bdd495a.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/5bd3b44f1f4c627bfa39f7809e866ec6.jpg\" _src=\"http://yanxuan.nosdn.127.net/5bd3b44f1f4c627bfa39f7809e866ec6.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/7fc36778fe2f6129b9c26e8298c5be7e.jpg\" _src=\"http://yanxuan.nosdn.127.net/7fc36778fe2f6129b9c26e8298c5be7e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c568432e3d5ab6786cd9dcae8008891b.jpg\" _src=\"http://yanxuan.nosdn.127.net/c568432e3d5ab6786cd9dcae8008891b.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/ec82ff5aecafa48807117da68cce2ce9.jpg\" _src=\"http://yanxuan.nosdn.127.net/ec82ff5aecafa48807117da68cce2ce9.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/b8eccbed570da595e6f8a71ed4abc42c.jpg\" _src=\"http://yanxuan.nosdn.127.net/b8eccbed570da595e6f8a71ed4abc42c.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/9cae1fed6ecefcd61435fe6e2c700fd6.jpg\" _src=\"http://yanxuan.nosdn.127.net/9cae1fed6ecefcd61435fe6e2c700fd6.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/e306a418f82777399f5e88b93cca22db.jpg\" _src=\"http://yanxuan.nosdn.127.net/e306a418f82777399f5e88b93cca22db.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/a66d717084e23864ce079f936557709f.jpg\" _src=\"http://yanxuan.nosdn.127.net/a66d717084e23864ce079f936557709f.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/6ae06c6505cdbf87a0210fe3b8727d5f.jpg\" _src=\"http://yanxuan.nosdn.127.net/6ae06c6505cdbf87a0210fe3b8727d5f.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/58ac2086725b0ba2fe800195f274a0b4.jpg\" _src=\"http://yanxuan.nosdn.127.net/58ac2086725b0ba2fe800195f274a0b4.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/5e2e9d9eb099647fbe041ec6645ac034.jpg\" _src=\"http://yanxuan.nosdn.127.net/5e2e9d9eb099647fbe041ec6645ac034.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/8154357c0fab82bd4e67cda9aaa128c0.jpg\" _src=\"http://yanxuan.nosdn.127.net/8154357c0fab82bd4e67cda9aaa128c0.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/4325763b738ec3183ecf0d82b2b28e32.jpg\" _src=\"http://yanxuan.nosdn.127.net/4325763b738ec3183ecf0d82b2b28e32.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/06d8ea9d10035a00f26c5c52cc601ca7.jpg\" _src=\"http://yanxuan.nosdn.127.net/06d8ea9d10035a00f26c5c52cc601ca7.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/499f30b9e69b5dddf3db36f105756111.jpg\" _src=\"http://yanxuan.nosdn.127.net/499f30b9e69b5dddf3db36f105756111.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/ed7e1733d54e711a560edb3a76f1a60c.jpg\" _src=\"http://yanxuan.nosdn.127.net/ed7e1733d54e711a560edb3a76f1a60c.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/b6474347eebdb917d2e827fd526dd01c.jpg\" _src=\"http://yanxuan.nosdn.127.net/b6474347eebdb917d2e827fd526dd01c.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/b2c0691f9204c5ebc94b4ff678919ca7.jpg\" _src=\"http://yanxuan.nosdn.127.net/b2c0691f9204c5ebc94b4ff678919ca7.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/b4811e702a6884a9251d7cc9e3b06b6f.jpg\" _src=\"http://yanxuan.nosdn.127.net/b4811e702a6884a9251d7cc9e3b06b6f.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/d518783c054695acf329e81d597fdec3.jpg\" _src=\"http://yanxuan.nosdn.127.net/d518783c054695acf329e81d597fdec3.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/835ce09e785cca635c176008975053a1.jpg\" _src=\"http://yanxuan.nosdn.127.net/835ce09e785cca635c176008975053a1.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/769af780de81a302c0a3b03ed8e6c528.jpg\" _src=\"http://yanxuan.nosdn.127.net/769af780de81a302c0a3b03ed8e6c528.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/da34f99daf9141f0fe56a766461b8485.jpg\" _src=\"http://yanxuan.nosdn.127.net/da34f99daf9141f0fe56a766461b8485.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/d7c9cd8722a2f9a78e158ce02ec5d4f2.jpg\" _src=\"http://yanxuan.nosdn.127.net/d7c9cd8722a2f9a78e158ce02ec5d4f2.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/09ea18953884b15227819e326103462b.jpg\" _src=\"http://yanxuan.nosdn.127.net/09ea18953884b15227819e326103462b.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/5ef728213983842edf1aec27b2c1f5b6.jpg\" _src=\"http://yanxuan.nosdn.127.net/5ef728213983842edf1aec27b2c1f5b6.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/95409f2a884dcfeaabfe5e61fcf9ec37.jpg\" _src=\"http://yanxuan.nosdn.127.net/95409f2a884dcfeaabfe5e61fcf9ec37.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/6807836dc2a940ba56ea10c7a63b14c9.jpg\" _src=\"http://yanxuan.nosdn.127.net/6807836dc2a940ba56ea10c7a63b14c9.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/e1d976d06853e7a0e6c9cc4ab484ac8a.jpg\" _src=\"http://yanxuan.nosdn.127.net/e1d976d06853e7a0e6c9cc4ab484ac8a.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/47f5673dec5005092f6d897d6335966c.jpg\" _src=\"http://yanxuan.nosdn.127.net/47f5673dec5005092f6d897d6335966c.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/1b0109abd0e6a0d13fa2423a96c1167e.jpg\" _src=\"http://yanxuan.nosdn.127.net/1b0109abd0e6a0d13fa2423a96c1167e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/916111a8f94cc0bd39375b3dcac14e35.jpg\" _src=\"http://yanxuan.nosdn.127.net/916111a8f94cc0bd39375b3dcac14e35.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c1360df3d6b703c5df9b2f47a2a3d12e.jpg\" _src=\"http://yanxuan.nosdn.127.net/c1360df3d6b703c5df9b2f47a2a3d12e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/1d5a31eb93ef873a165993bd99f29df1.jpg\" _src=\"http://yanxuan.nosdn.127.net/1d5a31eb93ef873a165993bd99f29df1.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/997a48948b89dd7261ed5a59ba884f45.jpg\" _src=\"http://yanxuan.nosdn.127.net/997a48948b89dd7261ed5a59ba884f45.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/eb96d9689735c9f4019ebf76da43b2b2.jpg\" _src=\"http://yanxuan.nosdn.127.net/eb96d9689735c9f4019ebf76da43b2b2.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/a92cf2172e6cafe080e4511205568d79.jpg\" _src=\"http://yanxuan.nosdn.127.net/a92cf2172e6cafe080e4511205568d79.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c9e94570428f197292bb3f43609963f5.jpg\" _src=\"http://yanxuan.nosdn.127.net/c9e94570428f197292bb3f43609963f5.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/37145f06cce747311692ad7f276645db.jpg\" _src=\"http://yanxuan.nosdn.127.net/37145f06cce747311692ad7f276645db.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c9a698b71ed911364fc6f243006c241c.jpg\" _src=\"http://yanxuan.nosdn.127.net/c9a698b71ed911364fc6f243006c241c.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/e89db969711efaa441c43d6b90498a0c.jpg\" _src=\"http://yanxuan.nosdn.127.net/e89db969711efaa441c43d6b90498a0c.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/3803bb1a18229562f18943512b1d3524.jpg\" _src=\"http://yanxuan.nosdn.127.net/3803bb1a18229562f18943512b1d3524.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/235cbb5be905ac2b87e7e8f7c8d90144.jpg\" _src=\"http://yanxuan.nosdn.127.net/235cbb5be905ac2b87e7e8f7c8d90144.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/3e38435b3fdbae4ee80b83995592901e.jpg\" _src=\"http://yanxuan.nosdn.127.net/3e38435b3fdbae4ee80b83995592901e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/8ceb7cd3231585da60a74dd2c1aa9015.jpg\" _src=\"http://yanxuan.nosdn.127.net/8ceb7cd3231585da60a74dd2c1aa9015.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/e151e225c2e30aab7ccf086094381577.jpg\" _src=\"http://yanxuan.nosdn.127.net/e151e225c2e30aab7ccf086094381577.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/363c19306953daf10968f4aa86617997.jpg\" _src=\"http://yanxuan.nosdn.127.net/363c19306953daf10968f4aa86617997.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/4237a392cf2e69b110ad4ecf35e44059.jpg\" _src=\"http://yanxuan.nosdn.127.net/4237a392cf2e69b110ad4ecf35e44059.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/da8ab35ada2dfe55006db01efa96e51a.jpg\" _src=\"http://yanxuan.nosdn.127.net/da8ab35ada2dfe55006db01efa96e51a.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/aa1d4fd00b7879db3f1051dc6d16aa87.jpg\" _src=\"http://yanxuan.nosdn.127.net/aa1d4fd00b7879db3f1051dc6d16aa87.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/302a8f2d997ff22bedcd837672cdafc2.jpg\" _src=\"http://yanxuan.nosdn.127.net/302a8f2d997ff22bedcd837672cdafc2.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/a39ff68c00522aef0472402958a334d2.jpg\" _src=\"http://yanxuan.nosdn.127.net/a39ff68c00522aef0472402958a334d2.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/86ccd0eb677c8b552398869d11a8917e.jpg\" _src=\"http://yanxuan.nosdn.127.net/86ccd0eb677c8b552398869d11a8917e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/a6d0ede352da947060d912d903646a5d.jpg\" _src=\"http://yanxuan.nosdn.127.net/a6d0ede352da947060d912d903646a5d.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/e6a118bf95bdb61891409d25f193e9c4.jpg\" _src=\"http://yanxuan.nosdn.127.net/e6a118bf95bdb61891409d25f193e9c4.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c214066e9bf65d60bcebd691b5b1cbc1.jpg\" _src=\"http://yanxuan.nosdn.127.net/c214066e9bf65d60bcebd691b5b1cbc1.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c301559ba3ee280bcbf2fc4269bfa9ca.jpg\" _src=\"http://yanxuan.nosdn.127.net/c301559ba3ee280bcbf2fc4269bfa9ca.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/573748f5c12ecb4515ba00a7b6e981dc.jpg\" _src=\"http://yanxuan.nosdn.127.net/573748f5c12ecb4515ba00a7b6e981dc.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/27bcc8bf512a7e6f994a9683b3deea82.jpg\" _src=\"http://yanxuan.nosdn.127.net/27bcc8bf512a7e6f994a9683b3deea82.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/e22a4507fd1e4b5ef859035e857ae419.jpg\" _src=\"http://yanxuan.nosdn.127.net/e22a4507fd1e4b5ef859035e857ae419.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/27b07b4ca709c33ad71b368f87781307.jpg\" _src=\"http://yanxuan.nosdn.127.net/27b07b4ca709c33ad71b368f87781307.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/ef31eb48bcb133728bffda7e1239b592.jpg\" _src=\"http://yanxuan.nosdn.127.net/ef31eb48bcb133728bffda7e1239b592.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/5f49aaaca59c0733ec92f100d01bc0af.jpg\" _src=\"http://yanxuan.nosdn.127.net/5f49aaaca59c0733ec92f100d01bc0af.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/818889261deb75044e1018ec53485d85.jpg\" _src=\"http://yanxuan.nosdn.127.net/818889261deb75044e1018ec53485d85.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/200369f023243e2faeb18a2a0a352ef1.jpg\" _src=\"http://yanxuan.nosdn.127.net/200369f023243e2faeb18a2a0a352ef1.jpg\" style=\"\"/></p><p><br/></p>', '2018-02-01 00:00:00', '2018-02-01 00:00:00', '0');
 
 -- ----------------------------
--- Table structure for `litemall_goods_attribute`
+-- Table structure for litemall_goods_attribute
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_goods_attribute`;
 CREATE TABLE `litemall_goods_attribute` (
@@ -2671,7 +2671,7 @@ INSERT INTO `litemall_goods_attribute` VALUES ('875', '1006014', '填充物重�
 INSERT INTO `litemall_goods_attribute` VALUES ('876', '1006014', '温馨提示', '天然桑蚕丝具有正常蛋白味道，通风晾晒2-3天即可散去', '2018-10-26 21:27:13', '2018-10-26 21:27:13', '0');
 
 -- ----------------------------
--- Table structure for `litemall_goods_product`
+-- Table structure for litemall_goods_product
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_goods_product`;
 CREATE TABLE `litemall_goods_product` (
@@ -2937,7 +2937,7 @@ INSERT INTO `litemall_goods_product` VALUES ('243', '1156006', '[\"标准\"]', '
 INSERT INTO `litemall_goods_product` VALUES ('244', '1166008', '[\"标准\"]', '459.00', '98', 'http://yanxuan.nosdn.127.net/615a16e899e01efb780c488df4233f48.png', '2018-02-01 00:00:00', '2018-11-07 17:14:01', '0');
 
 -- ----------------------------
--- Table structure for `litemall_goods_specification`
+-- Table structure for litemall_goods_specification
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_goods_specification`;
 CREATE TABLE `litemall_goods_specification` (
@@ -3201,7 +3201,7 @@ INSERT INTO `litemall_goods_specification` VALUES ('242', '1156006', '规格', '
 INSERT INTO `litemall_goods_specification` VALUES ('243', '1166008', '规格', '标准', '', '2018-02-01 00:00:00', '2018-02-01 00:00:00', '0');
 
 -- ----------------------------
--- Table structure for `litemall_groupon`
+-- Table structure for litemall_groupon
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_groupon`;
 CREATE TABLE `litemall_groupon` (
@@ -3225,7 +3225,7 @@ CREATE TABLE `litemall_groupon` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `litemall_groupon_rules`
+-- Table structure for litemall_groupon_rules
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_groupon_rules`;
 CREATE TABLE `litemall_groupon_rules` (
@@ -3252,7 +3252,7 @@ INSERT INTO `litemall_groupon_rules` VALUES ('2', '1109008', '云端沙发组合
 INSERT INTO `litemall_groupon_rules` VALUES ('3', '1110016', '天然硅胶宠物除毛按摩刷', 'http://yanxuan.nosdn.127.net/3bd73b7279a83d1cbb50c0e45778e6d6.png', '39', '2', '2020-12-31 00:00:00', '0', '2019-12-08 19:13:25', '2019-12-08 19:13:25', '0');
 
 -- ----------------------------
--- Table structure for `litemall_issue`
+-- Table structure for litemall_issue
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_issue`;
 CREATE TABLE `litemall_issue` (
@@ -3274,7 +3274,7 @@ INSERT INTO `litemall_issue` VALUES ('3', '如何申请退货？', '1.自收到�
 INSERT INTO `litemall_issue` VALUES ('4', '如何开具发票？', '1.如需开具普通发票，请在下单时选择“我要开发票”并填写相关信息（APP仅限2.4.0及以', '2018-02-01 00:00:00', '2018-02-01 00:00:00', '0');
 
 -- ----------------------------
--- Table structure for `litemall_keyword`
+-- Table structure for litemall_keyword
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_keyword`;
 CREATE TABLE `litemall_keyword` (
@@ -3302,7 +3302,7 @@ INSERT INTO `litemall_keyword` VALUES ('6', '520元礼包抢先领', '', '1', '1
 INSERT INTO `litemall_keyword` VALUES ('7', '单鞋', '', '0', '0', '8', '2018-02-01 00:00:00', '2018-02-01 00:00:00', '0');
 
 -- ----------------------------
--- Table structure for `litemall_log`
+-- Table structure for litemall_log
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_log`;
 CREATE TABLE `litemall_log` (
@@ -3330,7 +3330,7 @@ INSERT INTO `litemall_log` VALUES ('45', 'admin123', '0:0:0:0:0:0:0:1', '1', '�
 INSERT INTO `litemall_log` VALUES ('46', 'admin123', '0:0:0:0:0:0:0:1', '1', '登录', '1', '', '', '2020-12-16 01:29:29', '2020-12-16 01:29:29', '0');
 
 -- ----------------------------
--- Table structure for `litemall_notice`
+-- Table structure for litemall_notice
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_notice`;
 CREATE TABLE `litemall_notice` (
@@ -3349,7 +3349,7 @@ CREATE TABLE `litemall_notice` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `litemall_notice_admin`
+-- Table structure for litemall_notice_admin
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_notice_admin`;
 CREATE TABLE `litemall_notice_admin` (
@@ -3369,7 +3369,7 @@ CREATE TABLE `litemall_notice_admin` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `litemall_order`
+-- Table structure for litemall_order
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_order`;
 CREATE TABLE `litemall_order` (
@@ -3414,7 +3414,7 @@ INSERT INTO `litemall_order` VALUES ('1', '3', '20201214370548', '103', '0', '�
 INSERT INTO `litemall_order` VALUES ('2', '3', '20201214796722', '103', '0', '吴大大', '15800011111', '广东省广州市增城区 001', '', '198.00', '0.00', '10.00', '0.00', '0.00', '188.00', '188.00', null, null, null, null, null, null, null, null, null, null, '0', '2020-12-14 17:39:44', '2020-12-14 17:09:44', '2020-12-14 17:39:44', '0');
 
 -- ----------------------------
--- Table structure for `litemall_order_goods`
+-- Table structure for litemall_order_goods
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_order_goods`;
 CREATE TABLE `litemall_order_goods` (
@@ -3445,7 +3445,7 @@ INSERT INTO `litemall_order_goods` VALUES ('2', '1', '1127047', '趣味粉彩系
 INSERT INTO `litemall_order_goods` VALUES ('3', '2', '1152031', '魔兽世界-伊利丹颈枕眼罩套装', '1152031', '234', '2', '99.00', '[\"标准\"]', 'http://yanxuan.nosdn.127.net/fd6e78a397bd9e9804116a36f0270b0a.png', '0', '2020-12-14 17:09:44', '2020-12-14 17:09:44', '0');
 
 -- ----------------------------
--- Table structure for `litemall_permission`
+-- Table structure for litemall_permission
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_permission`;
 CREATE TABLE `litemall_permission` (
@@ -3494,7 +3494,7 @@ INSERT INTO `litemall_permission` VALUES ('30', '3', 'admin:coupon:create', '201
 INSERT INTO `litemall_permission` VALUES ('31', '3', 'admin:coupon:update', '2019-01-07 15:18:57', '2019-01-07 15:18:57', '0');
 
 -- ----------------------------
--- Table structure for `litemall_region`
+-- Table structure for litemall_region
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_region`;
 CREATE TABLE `litemall_region` (
@@ -6745,7 +6745,7 @@ INSERT INTO `litemall_region` VALUES ('3230', '375', '五家渠市', '3', '65900
 INSERT INTO `litemall_region` VALUES ('3231', '375', '铁门关市', '3', '659006');
 
 -- ----------------------------
--- Table structure for `litemall_role`
+-- Table structure for litemall_role
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_role`;
 CREATE TABLE `litemall_role` (
@@ -6768,7 +6768,7 @@ INSERT INTO `litemall_role` VALUES ('2', '商场管理员', '只有商场模块�
 INSERT INTO `litemall_role` VALUES ('3', '推广管理员', '只有推广模块的操作权限', '1', '2019-01-01 00:00:00', '2019-01-07 15:15:24', '0');
 
 -- ----------------------------
--- Table structure for `litemall_search_history`
+-- Table structure for litemall_search_history
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_search_history`;
 CREATE TABLE `litemall_search_history` (
@@ -6787,7 +6787,7 @@ CREATE TABLE `litemall_search_history` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `litemall_storage`
+-- Table structure for litemall_storage
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_storage`;
 CREATE TABLE `litemall_storage` (
@@ -6809,7 +6809,7 @@ CREATE TABLE `litemall_storage` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `litemall_super_vip_card`
+-- Table structure for litemall_super_vip_card
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_super_vip_card`;
 CREATE TABLE `litemall_super_vip_card` (
@@ -6829,7 +6829,7 @@ CREATE TABLE `litemall_super_vip_card` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `litemall_system`
+-- Table structure for litemall_system
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_system`;
 CREATE TABLE `litemall_system` (
@@ -6865,7 +6865,7 @@ INSERT INTO `litemall_system` VALUES ('17', 'litemall_wx_index_brand', '4', '201
 INSERT INTO `litemall_system` VALUES ('18', 'litemall_wx_index_topic', '4', '2019-12-08 19:11:18', '2019-12-08 19:11:18', '0');
 
 -- ----------------------------
--- Table structure for `litemall_topic`
+-- Table structure for litemall_topic
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_topic`;
 CREATE TABLE `litemall_topic` (
@@ -6910,7 +6910,7 @@ INSERT INTO `litemall_topic` VALUES ('313', '一次解决5个节日送礼难题'
 INSERT INTO `litemall_topic` VALUES ('314', '关爱他成长的每一个足迹', '专业运动品牌同厂，毛毛虫鞋买二送一', '<img src=\"//yanxuan.nosdn.127.net/75c55a13fde5eb2bc2dd6813b4c565cc.jpg\">\n    <img src=\"//yanxuan.nosdn.127.net/e27e1de2b271a28a21c10213b9df7e95.jpg\">\n    <img src=\"//yanxuan.nosdn.127.net/9d413d1d28f753cb19096b533d53418d.jpg\">\n    <img src=\"//yanxuan.nosdn.127.net/64b0f2f350969e9818a3b6c43c217325.jpg\">\n    <img src=\"//yanxuan.nosdn.127.net/a668e6ae7f1fa45565c1eac221787570.jpg\">\n    <img src=\"//yanxuan.nosdn.127.net/0d4004e19728f2707f08f4be79bbc774.jpg\">\n    <img src=\"//yanxuan.nosdn.127.net/79ee021bbe97de7ecda691de6787241f.jpg\">', '0.00', '6.4k', 'https://yanxuan.nosdn.127.net/14943267735961674.jpg', '1', '[]', '2018-02-01 00:00:00', '2018-02-01 00:00:00', '0');
 
 -- ----------------------------
--- Table structure for `litemall_user`
+-- Table structure for litemall_user
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_user`;
 CREATE TABLE `litemall_user` (
@@ -6928,7 +6928,7 @@ CREATE TABLE `litemall_user` (
   `weixin_openid` varchar(63) NOT NULL DEFAULT '' COMMENT '微信登录openid',
   `session_key` varchar(100) NOT NULL DEFAULT '' COMMENT '微信登录会话KEY',
   `point` int(11) DEFAULT '0' COMMENT '用户总积分',
-  `card_id` int(11) DEFAULT '0' COMMENT '会员卡id',
+  `card_level` int(11) NOT NULL DEFAULT '0' COMMENT '会员卡等级',
   `vip_card_id` int(11) DEFAULT '0' COMMENT '特权卡id',
   `status` tinyint(3) NOT NULL DEFAULT '0' COMMENT '0 可用, 1 禁用, 2 注销',
   `add_time` datetime DEFAULT NULL COMMENT '创建时间',
@@ -6942,10 +6942,10 @@ CREATE TABLE `litemall_user` (
 -- Records of litemall_user
 -- ----------------------------
 INSERT INTO `litemall_user` VALUES ('1', 'user123', '$2a$10$lTu9qi0hr19OC800Db.eludFr0AXuJUSrMHi/iPYhKRlPFeqJxlye', '1', null, '2019-04-20 22:17:43', '0:0:0:0:0:0:0:1', '0', 'user123', '', '', '', '', '0', '0', '0', '0', '2019-04-20 22:17:43', '2019-04-20 22:17:43', '0');
-INSERT INTO `litemall_user` VALUES ('3', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', '1', null, '2020-12-14 16:00:25', '10.200.101.109', '0', '吴窝。??', '', 'https://thirdwx.qlogo.cn/mmopen/vi_32/5LjBibnE7thhvEfV1T7lribwdEvhlqiciaIvCfoYlrJoxVwmvPwhf2BlCOoM2BIUM3uJiaOrHzmKTZm6fsGzojTEuOw/132', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', 'MdDVf3j4zBO1C0hy2I+8+Q==', '0', '0', '0', '0', '2020-12-14 16:00:25', '2020-12-14 16:00:25', '0');
+INSERT INTO `litemall_user` VALUES ('3', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', '1', null, '2020-12-14 16:00:25', '10.200.101.109', '0', '吴窝。??', '', 'https://thirdwx.qlogo.cn/mmopen/vi_32/5LjBibnE7thhvEfV1T7lribwdEvhlqiciaIvCfoYlrJoxVwmvPwhf2BlCOoM2BIUM3uJiaOrHzmKTZm6fsGzojTEuOw/132', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', 'MdDVf3j4zBO1C0hy2I+8+Q==', '0', '2', '0', '0', '2020-12-14 16:00:25', '2020-12-14 16:00:25', '0');
 
 -- ----------------------------
--- Table structure for `litemall_user_card`
+-- Table structure for litemall_user_card
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_user_card`;
 CREATE TABLE `litemall_user_card` (
@@ -6954,20 +6954,26 @@ CREATE TABLE `litemall_user_card` (
   `point_begin` int(11) NOT NULL DEFAULT '0' COMMENT '积分范围开始',
   `point_end` int(11) NOT NULL DEFAULT '0' COMMENT '积分范围结束',
   `multiple` int(11) NOT NULL DEFAULT '0' COMMENT '获得积分倍数',
-  `vip_day_multiple` int(11) NOT NULL DEFAULT '0' COMMENT '每月25号会员日，会员消费获双倍积分',
+  `vip_day_multiple` int(11) NOT NULL DEFAULT '0' COMMENT '会员消费获取积分倍数',
+  `vip_day` varchar(11) NOT NULL DEFAULT '0' COMMENT '会员日',
   `vip_month_coupon` varchar(200) NOT NULL DEFAULT '' COMMENT '每月1号定时发放券，多券id逗号隔开',
   `add_time` datetime DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `deleted` tinyint(1) DEFAULT '0' COMMENT '逻辑删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户会员规则配置表';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COMMENT='用户会员规则配置表';
 
 -- ----------------------------
 -- Records of litemall_user_card
 -- ----------------------------
+INSERT INTO `litemall_user_card` VALUES ('1', '0', '0', '999', '1', '2', '25', '1', '2021-01-08 09:33:06', '2021-01-08 09:33:08', '0');
+INSERT INTO `litemall_user_card` VALUES ('2', '1', '1000', '3999', '2', '2', '25', '2,3', '2021-01-08 09:40:29', '2021-01-08 09:40:31', '0');
+INSERT INTO `litemall_user_card` VALUES ('3', '2', '4000', '8999', '3', '2', '25', '', '2021-01-08 09:51:01', '2021-01-08 09:51:03', '0');
+INSERT INTO `litemall_user_card` VALUES ('4', '3', '9000', '19999', '4', '2', '25', '', '2021-01-08 09:51:52', '2021-01-08 09:51:55', '0');
+INSERT INTO `litemall_user_card` VALUES ('5', '4', '20000', '0', '5', '2', '25', '', '2021-01-08 09:52:17', '2021-01-08 09:52:21', '0');
 
 -- ----------------------------
--- Table structure for `litemall_user_point_detail`
+-- Table structure for litemall_user_point_detail
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_user_point_detail`;
 CREATE TABLE `litemall_user_point_detail` (
@@ -6976,6 +6982,7 @@ CREATE TABLE `litemall_user_point_detail` (
   `point` int(11) NOT NULL DEFAULT '0' COMMENT '积分',
   `order_id` int(11) NOT NULL DEFAULT '0' COMMENT '订单表的订单ID',
   `vip_card` int(11) NOT NULL DEFAULT '0' COMMENT '特权卡',
+  `source` int(11) NOT NULL DEFAULT '0' COMMENT '0 来自订单 1来自特权卡',
   `add_time` datetime DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`)

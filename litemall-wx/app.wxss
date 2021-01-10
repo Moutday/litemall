@@ -1,5 +1,4 @@
 /**app.wxss**/
-
 .container {
   box-sizing: border-box;
   background-color: #f4f4f4;
@@ -22,4 +21,10 @@ view, text {
 }
 .black{
   color: black;
+}
+.c778325{
+  color:#778325;
+}
+.ffa478{
+  color: #ffa478;
 }

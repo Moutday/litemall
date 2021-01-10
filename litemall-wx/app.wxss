@@ -17,3 +17,9 @@ view, text {
   font-size: 29rpx;
   color: #333;
 }
+.flex{
+  display: flex;
+}
+.black{
+  color: black;
+}

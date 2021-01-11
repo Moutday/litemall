@@ -1,0 +1,124 @@
+<!--index.wxml-->
+<view class="container">
+<view class="top-sec">
+  <image src="/static/images/new/home_logo.png" background-size="cover" class="home_logo"></image>
+  <view class="address">
+    <view>广州餐饮公司</view>
+    <view class="address-detail">
+      <image src="/static/images/new/address_icon.png" background-size="cover" class="address_icon"></image>
+        XMEX果调师 约1.1km 
+        <image src="/static/images/new/arrow_ic_right_black.png" background-size="cover" class="arrow_ic_right_black"></image>
+        <view>
+      </view>
+    </view>
+  </view>
+</view>
+  <swiper  class="banner" indicator-dots="{{false}}"  autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{banner}}" wx:key="id">
+      <block wx:if="{{item.link>0}}">
+        <navigator url="/pages/goods/goods?id={{item.link}}">
+        <image src="{{item.url}}" background-size="cover"></image>
+        </navigator>
+      </block>
+      <block wx:else>
+        <image src="{{item.url}}" background-size="cover"></image>
+      </block>
+    </swiper-item>
+  </swiper>
+  <view>
+    <image src="/static/images/new/home_vip.png" background-size="cover" class="home_vip"></image>
+    <view class="order-btn-sec">
+        <view>
+          <image src="/static/images/new/order_btn.png"  background-size="contain" class="order_btn"></image>
+        </view>
+        <view class='pay-coupon-v'>
+          <image src="/static/images/new/pay_btn_1.png" background-size="contain" class="pay_btn_1"></image>
+          <image src="/static/images/new/coupon_btn.png"  background-size="contain" class="coupon_btn"></image>
+        </view>
+    </view>
+  </view>
+  <view>
+    <image src="/static/images/new/banner_centre.png" background-size="contain" class="banner_centre"></image>
+  </view>
+  <view class="ranking-hot">
+        <view class="ranking-hot-left">
+          <text class="txt-hot">热销TOP3</text>
+          <view class="hot-sec flex">
+            <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
+            <view>
+              <view>红糖生姜饮</view>             
+              <view class="ffa478">￥12.00</view>
+            </view>
+          </view>
+          <view class="hot-sec flex">
+            <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
+            <view>
+              <view>红糖生姜饮</view>             
+              <view class="ffa478">￥12.00</view>
+            </view>
+          </view>
+          <view class="hot-sec flex">
+            <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
+            <view>
+              <view>红糖生姜饮</view>             
+              <view class="ffa478">￥12.00</view>
+            </view>
+          </view>
+        </view>
+        <view class="ranking-hot-right">
+          <text class="txt-hot">新品尝鲜榜</text>
+          <view class="hot-sec flex">
+            <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
+            <view>
+              <view>红糖生姜饮</view>             
+              <view class="ffa478">￥12.00</view>
+            </view>
+          </view>
+          <view class="hot-sec flex">
+            <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
+            <view>
+              <view>红糖生姜饮</view>             
+              <view class="ffa478">￥12.00</view>
+            </view>
+          </view>
+          <view class="hot-sec flex">
+            <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
+            <view>
+              <view>红糖生姜饮</view>             
+              <view class="ffa478">￥12.00</view>
+            </view>
+          </view>
+        </view>
+  </view>
+  <view class="a-section a-new" wx:if="{{newGoods.length > 0}}">
+    <view class="h">
+      <view>
+        <navigator url="../newGoods/newGoods">
+          <text class="txt">饮品尝鲜</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="b">
+      <view class="item" wx:for="{{newGoods}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <navigator url="../goods/goods?id={{item.id}}">
+          <image class="img" src="{{item.picUrl}}" background-size="cover"></image>
+          <view>
+            <view class="left-n">
+              <text class="name">红糖生姜饮</text>
+              <text class="price black">￥{{item.retailPrice}}</text>
+            </view>
+            <view class="right-n">
+              <text class="hy name" style='color:white'>
+                会员价
+              </text>
+              <text class="price ffa478">￥{{item.retailPrice}}</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<image src="/static/images/new/shopping_icon.png" background-size="cover" class="cart_icon"></image>

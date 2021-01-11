@@ -1,0 +1,118 @@
+/* plugin/components/calendar/calendar.wxss */
+
+/*
+ * 字体
+ */
+@font-face {font-family: "cwj-icon";
+    src: url('iconfont.eot?t=1543388096742'); /* IE9*/
+    src: url('iconfont.eot?t=1543388096742#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAQwAAsAAAAABowAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFY/YkrfY21hcAAAAYAAAABSAAABfozf7ZVnbHlmAAAB1AAAAGcAAABwT5s032hlYWQAAAI8AAAALAAAADYTZv1haGhlYQAAAmgAAAAcAAAAJAfeA4RobXR4AAAChAAAAAwAAAAMDAAAAGxvY2EAAAKQAAAACAAAAAgAHAA4bWF4cAAAApgAAAAfAAAAIAEOABhuYW1lAAACuAAAAUUAAAJtPlT+fXBvc3QAAAQAAAAALQAAAEI4wX7+eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkYWCcwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGBxevHnxlrnhfwNDDHMDQwNQmBEkBwACew3AeJztkLkNgEAMBMc+Q4Aog4CAYojoPyQ4ajj8UAYrzUi7cmRgAppzOAZyIUROXyX3xpK7seWNxX4/Y7h72Lul1TXzZ03vX9P4U1GfK9AXStUQ5QAAeJxjYGQAAqYrTE8YuBkYOBnV2NgF5RjNGc1MmM78a+YRY2QU42Gs5WCczOjBySPwt0CAh5PRk12MgQFNH5uIOKOYmbmgHiPTxn/NHByMtWC9TLf/7eAQY/+3HaiZaYIADwMA40UT8QB4nGNgZGBgAOLWhg9h8fw2Xxm4WRhA4IZKzAFkmoWB6QmQ4mBgAvEAGqAJIHicY2BkYGBu+N/AEMPCAAJAkpEBFTADAEcJAmwEAAAABAAAAAQAAAAAAAAAABwAOHicY2BkYGBgZuBhANEMDExAzAWEDAz/wXwGAAneAScAeJxlj01OwzAQhV/6B6QSqqhgh+QFYgEo/RGrblhUavdddN+mTpsqiSPHrdQDcB6OwAk4AtyAO/BIJ5s2lsffvHljTwDc4Acejt8t95E9XDI7cg0XuBeuU38QbpBfhJto41W4Rf1N2MczpsJtdGF5g9e4YvaEd2EPHXwI13CNT+E69S/hBvlbuIk7/Aq30PHqwj7mXle4jUcv9sdWL5xeqeVBxaHJIpM5v4KZXu+Sha3S6pxrW8QmU4OgX0lTnWlb3VPs10PnIhVZk6oJqzpJjMqt2erQBRvn8lGvF4kehCblWGP+tsYCjnEFhSUOjDFCGGSIyujoO1Vm9K+xQ8Jee1Y9zed0WxTU/3OFAQL0z1xTurLSeTpPgT1fG1J1dCtuy56UNJFezUkSskJe1rZUQuoBNmVXjhF6XNGJPyhnSP8ACVpuyAAAAHicY2BigAAuBuyAmZGJkZmRhYE7ObEotUS3KDM9o4QLws5JTSthYAAAdckIcgAAAA==') format('woff'),
+    url('iconfont.ttf?t=1543388096742') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('iconfont.svg?t=1543388096742#iconfont') format('svg'); /* iOS 4.1- */
+}
+  
+.cwj-icon {
+    font-family:"cwj-icon" !important;
+    font-size: 25px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #CCCCCC;
+  }
+  
+.cwj-calendar-icon-right:before { content: "\e8ec"; }
+  
+.cwj-calendar-icon-left:before { content: "\e8ed"; }
+  
+.cwj-calendar-icon-up:before { content: "\e6a5"; }
+
+.cwj-calendar-icon-down:before { content: "\e6a6"; }
+
+.cwj-calendar-icon-dot:before { content: "\e608"; }
+
+
+/**
+ * 日历组件
+ */
+
+.calendar {
+    display: block;
+    margin: 0rpx;
+    font-size: 28rpx;
+}
+
+/**
+ * 日历主标题
+ */
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    margin: 20rpx;
+    text-align: center;
+    /* font-weight: bold; */
+    font-size: 35rpx;
+}
+
+.calendar-header picker {
+  margin: 0 15px;
+}
+
+/**
+ * 日历周标题
+ */
+
+.calendar-weeks {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    background: #FAFAFA;
+}
+
+/**
+ * 日历周标题单个项目
+ */
+
+.calendar-weekday {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;    
+    text-align: center;
+    color: #818181;
+}
+
+/**
+ * 日历日期行
+ */
+
+.calendar-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+/**
+ * 日历单个日期项
+ */
+
+.calendar-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25rpx;
+    margin-bottom: 25rpx;    
+    text-align: center;    
+}
+
+.cell-rounded {
+    border-radius: 50%;
+}
+
+.calendar-lunar-day {    
+    font-size: 20rpx;
+}

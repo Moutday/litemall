@@ -1,0 +1,9 @@
+<!--components/authLogin/authLogin.wxml-->
+<view class='modal-mask' catchtouchmove="preventTouchMove" bindtap="hideModal" hidden='{{!modalHidden}}'></view>
+<view class='modal-pop' catchtouchmove="preventTouchMove" hidden='{{!modalHidden}}'>
+  <wux-icon class='close' wux-class='icon' type='ios-close-circle' size='32' color='#999' bindtap='hideModal'></wux-icon>
+  <view class='modal-content'>
+    <text>登录到演舞台</text>
+    <button class='getInfo-btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+  </view>
+</view>

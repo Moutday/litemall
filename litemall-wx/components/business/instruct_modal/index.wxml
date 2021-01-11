@@ -1,0 +1,12 @@
+<!--components/business/instruct_modal/index.wxml-->
+<view class='modal-mask' catchtouchmove="preventTouchMove" hidden='{{!modalHidden}}'></view>
+<view class='modal-pop' catchtouchmove="preventTouchMove" hidden='{{!modalHidden}}'>
+  <image src='/images/shuoming.png' class='instruct-img'></image>
+  <view class='instruct-text'>
+    <text>点击日期进入活动列表</text>
+    <image src='/images/zhixiang.png'></image>
+  </view>
+  <view class='instruct-btn'>
+    <button bind:tap='onSure'>我知道了</button>
+  </view>
+</view>

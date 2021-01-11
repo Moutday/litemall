@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wux-radio-group": "../../radio-group/index",
+    "wux-radio": "../../radio/index",
+    "wux-checkbox-group": "../../checkbox-group/index",
+    "wux-checkbox": "../../checkbox/index",
+    "wux-popup": "../../popup/index"
+  }
+}

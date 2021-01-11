@@ -1,0 +1,50 @@
+/* components/authLogin/authLogin.wxss */
+@import '../../../base.wxss';
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:rgba(0,0,0,.5);
+  opacity: 1;
+  overflow: hidden;
+  z-index: 888;
+  color: #fff;
+}
+
+.modal-pop {
+  position: fixed;
+  top: 50%;  
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 75%;
+  height: 250rpx;
+  padding: 20rpx;
+  z-index: 999;
+  background: #fff;
+  border-radius: 15rpx;
+}
+
+.close {
+  position: absolute;
+  right: 20rpx;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-content text {
+  display: block;
+  font-size: 35rpx;
+  color: #959595;
+  margin: 60rpx 0 30rpx;
+}
+
+.modal-content .getInfo-btn {
+  width: 80%;
+  margin: 15rpx auto 0;
+  background: #FFC248;
+  border-radius: 15rpx;
+}

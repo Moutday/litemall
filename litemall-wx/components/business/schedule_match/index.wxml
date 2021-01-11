@@ -1,0 +1,24 @@
+<!--components/business/schedule_match/index.wxml-->
+<view class='modal-mask' catchtouchmove="preventTouchMove" bind:tap="onCancel" hidden='{{!modalHidden}}'></view>
+<view class='modal-pop' catchtouchmove="preventTouchMove" hidden='{{!modalHidden}}'>
+  <view class='top-img'>
+    <image src='{{imageUrl}}' style='width: 108rpx;height: 103rpx;'></image>
+  </view>
+  <view class="explain-text">
+    <text>我们已经只能推送了高匹配的活动到您的档期里了，您可以点击日历中的任意时期进入活动列表参加活动了！</text>
+  </view>
+  <view class="roll-text">
+    <view class="roll-item">
+      <view></view>
+      <text>红色表示当天有活动可参加</text>
+    </view>
+    <view class="roll-item">
+        <view></view>
+        <text>蓝球表示当天已有活动安排</text>
+    </view>
+  </view>
+  <view class="try-btn">
+    <button bind:tap='ToTry'>去试试</button>
+    <text>完善你的资料卡推送会更精准哦</text>
+  </view>
+</view>

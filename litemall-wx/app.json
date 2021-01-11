@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/newIndex/index",
     "pages/index/index",
     "pages/catalog/catalog",
     "pages/newGoods/newGoods",
@@ -58,28 +57,28 @@
     "color": "#666",
     "list": [
       {
-        "pagePath": "pages/newIndex/index",
-        "iconPath": "static/images/new/home_icon.png",
-        "selectedIconPath": "static/images/new/home_icon_sel.png",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home@selected.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/catalog/catalog",
-        "iconPath": "static/images/new/menu_icon.png",
-        "selectedIconPath": "static/images/new/menu_icon_sel.png",
-        "text": "菜单"
+        "iconPath": "static/images/category.png",
+        "selectedIconPath": "static/images/category@selected.png",
+        "text": "分类"
       },
       {
         "pagePath": "pages/cart/cart",
-        "iconPath": "static/images/new/vip_icon.png",
-        "selectedIconPath": "static/images/new/vip_icon_sel.png",
-        "text": "会员"
+        "iconPath": "static/images/cart.png",
+        "selectedIconPath": "static/images/cart@selected.png",
+        "text": "购物车"
       },
       {
         "pagePath": "pages/ucenter/index/index",
-        "iconPath": "static/images/new/my_icon.png",
-        "selectedIconPath": "static/images/new/my_icon_sel.png",
-        "text": "我的"
+        "iconPath": "static/images/my.png",
+        "selectedIconPath": "static/images/my@selected.png",
+        "text": "个人"
       }
     ]
   },

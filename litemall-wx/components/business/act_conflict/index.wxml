@@ -1,0 +1,14 @@
+<!--components/business/act_conflict/index.wxml-->
+<view class='modal-mask' catchtouchmove="preventTouchMove" bind:tap="onCancel" hidden='{{!modalHidden}}'></view>
+<view class='modal-pop' catchtouchmove="preventTouchMove" hidden='{{!modalHidden}}'>
+  <view class='top-img'>
+    <image src='{{imageUrl}}' style='width: 108rpx;height: 103rpx;'></image>
+  </view>
+  <view class="text-explain">
+    <text style='color:#8E8D93;'>{{explainText}}</text>
+  </view>
+  <view class='choose-btn'>
+    <button class='change' bind:tap='onSure'>确定</button>
+    <!-- <button class='cancel' bind:tap='ToSend'>直接发送</button>       -->
+  </view>
+</view>

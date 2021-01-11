@@ -1,0 +1,122 @@
+/* components/business/edit_act_num_modal/index.wxss */
+@import '../../../base.wxss';
+text, view {
+  color: #8E8D93
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:rgba(0,0,0,.5);
+  opacity: 1;
+  overflow: hidden;
+  z-index: 888;
+  color: #fff;
+}
+
+.modal-pop {
+  position: fixed;
+  top: 50%;  
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 75%;
+  height: 770rpx;
+  /* padding: 20rpx; */
+  z-index: 999;
+  background: #fff;
+  border-radius: 15rpx;
+}
+
+.top-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 160rpx;
+  background: #FFC557;
+  border-top-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+} /* top end */
+
+.invite-num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 260rpx;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.num-input {
+  display: flex;
+  align-items: center;
+  margin: 15rpx 0;
+}
+
+.num-input > input {
+  width: 100rpx;
+  border-bottom: 1px solid #F2F2F2;
+  text-align: center;
+}
+
+.num-input > text {
+  display: block;
+  margin-left: 15rpx;
+}
+
+.Invite-type {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  width: 80%;
+  height: 100rpx;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.radio-type label image {
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.choose-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  margin-top: 15rpx;
+}
+
+.choose-btn button {
+  width: 200rpx;
+  height: 100%;
+  line-height: 80rpx;
+  border-radius: 15rpx;
+  margin: 20rpx 20rpx 0;
+}
+
+.choose-btn .cancel {
+  border: 1px solid #FEC047;
+  color: #FEC047;
+}
+
+.choose-btn .change {
+  background: #FEC047;
+}

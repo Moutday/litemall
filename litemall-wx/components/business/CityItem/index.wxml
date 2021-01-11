@@ -1,0 +1,43 @@
+<!--components/CityItem/index.wxml-->
+<!-- <view class="modal-mask" catchtouchmove="preventTouchMove" bindtap="onConfirm" hidden="{{!modalHidden}}"></view> -->
+  <view class="modal" hidden="{{!modalHidden}}" style='height:{{windowHeight-94}}px'>
+      <!-- <block wx:for="{{items}}" wx:key='index'> -->
+        <!-- <view class="wux-cascader__title" wx:if="{{ title }}">{{ title }}</view> -->
+        <view class='city-item__title'>
+          <view class='choose-city'>
+            <text>选择所在城市：</text>
+            <text>{{ currentCity || "请选择"}}</text>
+          </view>
+          <view class='getback' bindtap="onReset">
+            <image src='/images/getback.png' style='width:30rpx; height:30rpx;margin-right: 10rpx;'></image>
+            <text>返回</text>
+          </view>
+        </view>
+          <scroll-view class="wux-filterbar__scroll-view" scroll-y bindscroll="onScroll">
+              <!-- <block wx:for="{{ actCity }}" wx:for-item="p" wx:for-index="pIndex" wx:key=""> -->
+                  <view class="wux-filterbar__panel">
+                      <!-- <view class="wux-filterbar__panel-hd">
+                          <div class="wux-filterbar__panel-title">{{ p.name }}</div>
+                          <div class="wux-filterbar__panel-selected">{{ p.selected }}</div>
+                      </view> -->
+                      <view class="wux-filterbar__panel-bd">
+                          <!-- data-parent-index="{{ index }}" data-index="{{ pIndex }}" data-item="{{ p }}" -->
+                          <radio-group bindchange="onRadioChange">
+                                <view class="wux-filterbar__groups">
+                                    <block wx:for="{{ actCity }}" wx:key="index">
+                                        <view class="wux-filterbar__group">
+                                            <radio class="wux-filterbar__radio" value="{{ item.city }}" checked="{{ item.checked }}" />
+                                            <view class="wux-filterbar__btn {{ item.checked ? 'wux-filterbar__btn--checked' : '' }}">{{ item.city }}</view>
+                                        </view>
+                                    </block>
+                                </view>
+                            </radio-group>
+                      </view>
+                  </view>
+              <!-- </block> -->
+          </scroll-view>
+          <view class="wux-filterbar__btns">
+              <!-- <view class="wux-filterbar__btn" data-index="{{ index }}" data-item="{{ item }}" bindtap="onReset">取消</view> -->
+              <view class="wux-filterbar__btn wux-filterbar__btn--danger" data-index="{{ index }}" bindtap="onConfirm">确定</view>
+          </view>
+    </view>

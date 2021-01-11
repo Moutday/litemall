@@ -1,0 +1,103 @@
+/* components/business/passModal/index.wxss */
+/* components/business/cancel_activity/index.wxss */
+@import '../../../base.wxss';
+
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:rgba(0,0,0,.5);
+  opacity: 1;
+  overflow: hidden;
+  z-index: 888;
+  color: #fff;
+}
+
+.modal-pop {
+  position: fixed;
+  top: 50%;  
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 75%;
+  /* height: 770rpx; */
+  /* padding: 20rpx; */
+  z-index: 999;
+  background: #fff;
+  border-radius: 15rpx;
+}
+
+.top-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 160rpx;
+  background: #FFC557;
+  border-top-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+} /* top end */
+
+.text-explain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100%; */
+  /* font-size: 40rpx; */
+  letter-spacing: 2rpx;
+  text-align: center;
+  margin: 50rpx 70rpx;
+}
+
+.text-explain text:first-child {
+  font-size: 40rpx;
+  color: #8F8E93;
+  font-weight: bold;
+}
+
+.text-explain .interpret {
+  font-size: 32rpx;
+  /* height: 40rpx; */
+  color: #B0AFB4;
+  margin-top: 25rpx;
+}
+
+.text-explain .update {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px solid #BEBEBE;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}
+
+.choose-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 80rpx; */
+  margin-top: 15rpx;
+  margin-bottom: 40rpx;
+}
+
+.choose-btn button {
+  width: 200rpx;
+  height: 100%;
+  line-height: 80rpx;
+  border-radius: 15rpx;
+  margin: 20rpx 20rpx 0;
+}
+
+.choose-btn .cancel {
+  border: 1px solid #FEC047;
+  color: #FEC047;
+}
+
+.choose-btn .change {
+  background: #FEC047;
+} /* 按钮 end */

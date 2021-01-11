@@ -1,0 +1,33 @@
+<!--components/business/edit_act_num_modal/index.wxml-->
+<view class='modal-mask' catchtouchmove="preventTouchMove" bind:tap="onCancel" hidden='{{!modalHidden}}'></view>
+<view class='modal-pop' catchtouchmove="preventTouchMove" hidden='{{!modalHidden}}'>
+  <view class='top-img'>
+    <image src='/images/invite.png' style='width: 108rpx;height: 103rpx;'></image>
+  </view>
+  <view>
+    <view class='invite-num'>
+      <text>本次活动您还需要再邀请</text>
+      <view class='num-input'>
+        <input value='' type="number" bind:change='changeInviteNum'></input>
+        <text style='color: #FFC557;'>人</text>
+      </view>
+        <text>邀请原因：</text>
+    </view>
+    <view class='Invite-type'>
+      <radio-group class='radio-type' bind:change='changeType'>
+        <block wx:for="{{radioInvite}}" wx:key='index'>
+          <label class="radio-item">
+            <radio value='{{item.name}}' checked='{{item.checked}}' hidden='false' />
+              <text>{{item.name}}</text>
+              <image src="{{item.imgUrl}}" wx:if='{{!item.checked}}'></image>
+              <image src="{{item.imgUrlSel}}" wx:else></image>
+          </label>
+        </block>
+      </radio-group>
+    </view>
+    <view class='choose-btn'>
+      <button class='cancel' bind:tap='onCancel'>取消</button>
+      <button class='change' bind:tap='onChange'>确定</button>      
+    </view>
+  </view>
+</view>

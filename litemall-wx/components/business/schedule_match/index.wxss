@@ -1,0 +1,103 @@
+/* components/business/schedule_match/index.wxss */
+@import '../../../base.wxss';
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:rgba(0,0,0,.5);
+  opacity: 1;
+  overflow: hidden;
+  z-index: 888;
+  color: #fff;
+}
+
+.modal-pop {
+  position: fixed;
+  top: 50%;  
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 75%;
+  /* height: 770rpx; */
+  /* padding: 20rpx; */
+  z-index: 999;
+  background: #fff;
+  border-radius: 15rpx;
+}
+
+.top-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 160rpx;
+  background: #FFC557;
+  border-top-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+} /* top end */
+
+.explain-text {
+  padding: 45rpx 25rpx 35rpx;
+  color: #A1A1A1;
+}
+
+.roll-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roll-text .roll-item {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.roll-text .roll-item > view {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+
+.roll-text .roll-item > text{
+  color: #A1A1A1;
+}
+
+.roll-text .roll-item:first-child > view {
+  background: #CC1438;
+}
+
+.roll-text .roll-item:last-child > view {
+  background: #3399FF;
+}
+
+.try-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* height: 60rpx; */
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.try-btn button {
+  display: block;
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 32rpx;
+  background: #FFC148;
+  margin-bottom: 15rpx;
+  border-radius: 10rpx;
+}
+
+.try-btn text {
+  font-size: 25rpx;
+  color: #A1A1A1;
+}
+
+

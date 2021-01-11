@@ -1,5 +1,4 @@
 /**app.wxss**/
-
 .container {
   box-sizing: border-box;
   background-color: #f4f4f4;
@@ -16,4 +15,26 @@ view, text {
   font-family: PingFangSC-Light, helvetica, 'Heiti SC';
   font-size: 29rpx;
   color: #333;
+}
+.ffa478{
+  color: #ffa478
+}
+.flex{
+  display: flex;
+}
+.a778325{
+  color: #778325;
+}
+.click-btn{
+  border: 1px solid #778325;
+  border-radius: 50rpx;
+  padding: 15rpx;
+}
+.ellipsis{
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+.txt-through{
+  text-decoration:line-through;
 }

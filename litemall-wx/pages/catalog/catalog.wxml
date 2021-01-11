@@ -2,27 +2,47 @@
   <view class="search">
     <navigator url="/pages/search/search" class="input">
       <van-icon name="search"/>
-      <text class="txt">商品搜索, 共{{goodsCount}}款好物</text>
+      <text class="txt"><icon class="weui-icon-search"></icon>想喝什么搜一搜</text>
     </navigator>
   </view>
+  <view class='tv'>
+      <image src="/static/images/new/banner_top.png" background-size="cover" class="banner_top"></image>
+  </view>
+  <view class="title-sec">
+      <view class="title-v">XMEX果调师</view>
+      <view class='flex addr-sec'>
+          <view class='addr'>广东省广州市番禺区钟村街汉兴路142号奥园汉兴路142号奥园汉兴路142号奥园</view>
+          <view class='a778325 click-btn'>切换门店</view>
+      </view>
+      <view class='a778325'>
+          <image src="/static/images/new/notice_icon.png"  class="notice_icon"></image> 欢迎光临
+      </view>
+  </view>
+
+
   <view class="catalog">
     <scroll-view class="nav" scroll-y="true">
       <view class="item {{ currentCategory.id == item.id ? 'active' : ''}}" wx:for="{{categoryList}}" wx:key="id" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCate">{{item.name}}</view>
     </scroll-view>
     <scroll-view class="cate" scroll-y="true">
-      <navigator url="url" class="banner">
-        <image class="image" src="{{currentCategory.picUrl}}"></image>
-        <view class="txt">{{currentCategory.frontName}}</view>
-      </navigator>
       <view class="hd">
-        <text class="line"></text>
-        <text class="txt">{{currentCategory.name}}分类</text>
-        <text class="line"></text>
+        <text class="txt">养生茶系列</text>
       </view>
       <view class="bd">
         <navigator url="/pages/category/category?id={{item.id}}" class="item {{(index+1) % 3 == 0 ? 'last' : ''}}" wx:key="id" wx:for="{{currentSubCategoryList}}">
-          <image class="icon" src="{{item.picUrl}}"></image>
-          <text class="txt">{{item.name}}</text>
+            <image class="icon" src="/static/images/new/photo_my.png"></image>
+            <view class="desc">
+              <text class="txt" style='font-size:28rpx;'>红糖生姜饮</text>
+              <text class="txt ellipsis" style='font-size:18rpx;color:#999999;width:65%;'>采用精选本地老姜、黄冰糖、云南本地老姜、黄冰糖、云南</text>
+              <image class="menu_vip" src="/static/images/new/menu_vip.png"></image>
+              <view class="money">
+                <view>
+                  <text style='font-size:32rpx;color:#f95731;'>￥11.4</text> 
+                  <text class="txt-through" style='font-size:24rpx;color:#999999;'>￥12</text>
+                  </view>
+              <image class="add_icon" src="/static/images/new/add_icon.png"></image>
+              </view>
+            </view>
         </navigator>
       </view>
     </scroll-view>

@@ -62,17 +62,7 @@
   margin-right: 15rpx;
 }
 
-.roll-text .roll-item > text{
-  color: #A1A1A1;
-}
 
-.roll-text .roll-item:first-child > view {
-  background: #CC1438;
-}
-
-.roll-text .roll-item:last-child > view {
-  background: #3399FF;
-}
 
 .try-btn {
   display: flex;

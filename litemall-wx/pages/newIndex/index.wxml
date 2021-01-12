@@ -32,7 +32,7 @@
           <image src="/static/images/new/order_btn.png"  background-size="contain" class="order_btn"></image>
         </view>
         <view class='pay-coupon-v'>
-          <image src="/static/images/new/pay_btn_1.png" background-size="contain" class="pay_btn_1"></image>
+          <image src="/static/images/new/pay_btn.png" background-size="contain" class="pay_btn_1"></image>
           <image src="/static/images/new/coupon_btn.png"  background-size="contain" class="coupon_btn"></image>
         </view>
     </view>

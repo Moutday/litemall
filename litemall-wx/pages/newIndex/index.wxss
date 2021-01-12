@@ -124,19 +124,22 @@ width:370rpx;
   align-items: center;
   justify-content: center;
   height: 130rpx;
+  background:#f5f5f5;
+
 }
 
 .a-section .h .txt {
   background-size:16.656rpx 27rpx;
   display:inline-block;
-  height:55rpx;
+  height:75rpx;
   font-size:33rpx;
-  line-height:55rpx;
+  line-height:75rpx;
   border-radius:20rpx;
   width:170rpx;
-  color: green;
+  color: #778325;
   text-align: center;
   border:solid 1rpx  #888888;
+  font-weight: 600;
 }
 
 .a-brand .b {

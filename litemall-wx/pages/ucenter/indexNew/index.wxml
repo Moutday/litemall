@@ -1,0 +1,64 @@
+<view class="container">
+  <view class="profile-info" bindtap="goLogin">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <image class="avatar" wx:if="{{!userInfo.nickName}}" src="/static/images/new/head_icon.png"></image>
+    <view class="info">
+      <text class="name">{{userInfo.nickName}}</text>
+      <text class="name" wx:if="{{!userInfo.nickName}}">亲爱的会员</text>
+      <text class="sq" wx:if="{!userInfo.nickName}}">点击授权头像昵称</text>
+    </view>
+    <view>
+      <view><image class='code_icon_my' src='/static/images/new/code_icon_my.png'></image></view>
+      <view class='user_column_item_text hym'>会员码</view>
+    </view>
+  </view>
+
+  <view class='separate'></view>
+
+  <view class='user_area'>
+    <view class='user_column'>
+      <view class='user_column_item' bindtap='goOrderIndex' data-index='1' data-route='/pages/ucenter/order/order'>
+        <image class='user_column_item_image' src='/static/images/new/order_icon_my.png'>
+        </image>
+        <view class='user_column_item_text'>我的订单</view>
+      </view>
+      <view class='user_column_item' bindtap='goCoupon'>
+        <text class="user_column_item_badge" wx:if="{{order.unship != 0}}">{{order.unship}}</text>
+        <image class='user_column_item_image' src='/static/images/new/coupon_icon_my.png'></image>
+        <view class='user_column_item_text'>优惠卷</view>
+      </view>
+      <view class='user_column_item' bindtap='goOrderIndex' data-index='3' data-route='/pages/ucenter/order/order'>
+        <text class="user_column_item_badge" wx:if="{{order.unrecv != 0}}">{{order.unrecv}}</text>
+        <image class='user_column_item_image' src='/static/images/new/wallet_icon_my.png'></image>
+        <view class='user_column_item_text'>钱包</view>
+      </view>
+      <view class='user_column_item point-i' bindtap='goOrderIndex' data-index='4' data-route='/pages/ucenter/order/order'>
+        <view class='point'>500</view>
+        <view class='user_column_item_text'>积分</view>
+      </view>
+    </view>
+  </view>
+  <image class='my_card' src='/static/images/new/my_card.png'></image>
+  <view class='user_row_sec'>
+    <view class='user_row'>
+      <view class='user_row_left'>我的服务</view>
+    </view>
+    <view class='user_column'>
+     <view class='user_column_item' bindtap='aboutUs'>
+        <image class='user_column_item_image' src='/static/images/about.png'></image>
+        <view class='user_column_item_text'>导航</view>
+      </view>
+      <view class='user_column_item'>
+        <contact-button style="opacity:0;position:absolute;" type="default-dark" session-from="weapp" size="27">
+        </contact-button>
+        <image class='user_column_item_image' src='/static/images/customer.png'></image>
+        <view class='user_column_item_text'>联系客服</view>
+      </view>
+      <view class='user_column_item' bindtap='aboutUs'>
+        <image class='user_column_item_image' src='/static/images/about.png'></image>
+        <view class='user_column_item_text'>关于我们</view>
+      </view>
+    </view>
+  </view>
+<!--   <view class="logout" wx:if="{{hasLogin}}" bindtap="exitLogin">退出登录</view>
+ --></view>

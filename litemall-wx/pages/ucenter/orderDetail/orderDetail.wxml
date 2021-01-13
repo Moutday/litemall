@@ -1,21 +1,35 @@
+<import src="../../common/Tpl_modal.wxml"/>
+ <template data="{{isRuleTipTrue,showDesc}}" is="modal_time"/>
 <view class="container">
+    <view class="hbtn">
+        <view class="btn active" bindtap="cancelOrder">送到餐桌</view>
+        <view class="btn" bindtap="showTipRule">打包带走</view>
+        <view class="btn" bindtap="confirmOrder">外送</view>
+    </view>
   <view class="order-info">
     <view class="item">下单时间：{{orderInfo.addTime}}</view>
     <view class="item">订单编号：{{orderInfo.orderSn}}</view>
-    <view class="item">订单留言：{{orderInfo.message}}</view>
+    <view class="item">订单备注：{{orderInfo.message}}</view>
     <view class="item-c">
-      <view class="l">实付：
-        <text class="cost">￥{{orderInfo.actualPrice}}</text>
+      <view class="l">实付<text class="cost">￥{{orderInfo.actualPrice}}</text>
       </view>
       <view class="r">
         <view class="btn active" bindtap="cancelOrder" wx:if="{{handleOption.cancel}}">取消订单</view>
-        <view class="btn active" bindtap="payOrder" wx:if="{{handleOption.pay}}">去付款</view>
+        <view class="btn active" bindtap="payOrder" wx:if="{{handleOption.pay}}">去支付</view>
         <view class="btn active" bindtap="confirmOrder" wx:if="{{handleOption.confirm}}">确认收货</view>
         <view class="btn active" bindtap="deleteOrder" wx:if="{{handleOption.delete}}">删除订单</view>
         <view class="btn active" bindtap="refundOrder" wx:if="{{handleOption.refund}}">申请退款</view>
         <view class="btn active" bindtap="aftersaleOrder" wx:if="{{handleOption.aftersale}}">申请售后</view>
       </view>
     </view>
+  </view>
+
+  <view class="c-s-t">
+      <view class="item">
+      配送门店: <text class="a000000">XMEX果调师</text>
+        <image class="arrow_icon_grey"  src="/static/images/new/arrow_icon_grey.png"></image>
+      </view>
+      <view class="item">预计送达时间: <text class="a778325">12: 00</text></view>
   </view>
 
   <view class="order-goods">
@@ -67,10 +81,10 @@
           <text class="txt">￥-{{orderInfo.couponPrice}}</text>
         </view>
       </view>
-      <view class="pay-fee">
+      <!-- <view class="pay-fee">
         <text class="label">实付：</text>
         <text class="txt">￥{{orderInfo.actualPrice}}</text>
-      </view>
+      </view> -->
     </view>
   </view>
 

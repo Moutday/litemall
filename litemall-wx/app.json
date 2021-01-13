@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/newIndex/index",
+    "pages/ucenter/vipCard/index",
+    "pages/vip/index", 
     "pages/index/index",
     "pages/catalog/catalog",
     "pages/newGoods/newGoods",
@@ -71,7 +73,7 @@
         "text": "菜单"
       },
       {
-        "pagePath": "pages/cart/cart",
+        "pagePath": "pages/vip/index",
         "iconPath": "static/images/new/vip_icon.png",
         "selectedIconPath": "static/images/new/vip_icon_sel.png",
         "text": "会员"

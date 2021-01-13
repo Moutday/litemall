@@ -210,6 +210,18 @@ Page({
       url: '/pages/help/help'
     });
   },  
+  //打开规则提示
+  showTipRule: function () {
+    this.setData({
+      isRuleTipTrue: true
+    })
+  },
+  //关闭规则提示
+  hideTipRule: function () {
+    this.setData({
+      isRuleTipTrue: false,
+    })
+  },
   exitLogin: function() {
     wx.showModal({
       title: '',

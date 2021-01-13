@@ -1,0 +1,35 @@
+<template name="modal_desc">
+
+<!--  弹出模层  -->
+    <view class="ruleZhezhaoTip {{isRuleTipTrue?'isRuleShowTip':'isRuleHideTip'}}">
+    <view class='d-hearder'>
+         <view class="hym-tip">会员码</view>
+        <view class="tip">门店结账前请出示此码</view>
+        <image class="code" src="/static/images/new/code.png"></image>
+    </view>
+        <view class="tipv">
+          <image class="nclose-tip" bindtap='hideTipRule' src="/static/images/new/popup_icon.png"></image>
+        </view>
+    </view>
+    <!--  end  -->
+    </template>
+
+    <template name="modal_time">
+        <view class="ruleZhezhaoTip {{isRuleTipTrue?'isRuleShowTip':'isRuleHideTip'}}">
+        <view class='d-hearder'>
+             <view class="hym-tip">选择自取时间  <image class="nclose-tip" bindtap='hideTipRule' src="/static/images/new/close_icon.png"></image></view>
+            <view class="tip">自取门店: XMEX 果调师</view>
+                <scroll-view class="tbtn-v" scroll-x="true" style=" white-space: nowrap; display: flex" >
+                <!--  display: inline-block-->
+                    <view class="btn time active" bindtap="cancelOrder">立即自取</view>
+                    <view class="btn time" bindtap="payOrder">12：00</view>
+                    <view class="btn time" bindtap="payOrder">12：00</view>
+                    <view class="btn time" bindtap="payOrder">12：00</view>
+                    <view class="btn time" bindtap="payOrder">12：00</view>
+                    <view class="btn time" bindtap="payOrder">12：00</view>
+                    <view class="btn time" bindtap="payOrder">12：00</view>
+                </scroll-view>
+                <view class="btn confirm" bindtap="hideTipRule">确认</view>
+        </view>
+        </view>
+    </template>

@@ -1,0 +1,45 @@
+.wx-login-btn {
+  margin: 60rpx 0 40rpx 0;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 30rpx;
+  border-radius: 15rpx;
+  width: 50%;
+  color: #fff;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin-left: 25%;
+  text-align: center;
+  /* padding-left: -5rpx; */
+  letter-spacing: 3rpx;
+}
+.a{
+  display: flex;
+  border: 2rpx solid #778325;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  margin-top:20rpx;
+}
+.b{
+  height: atuo;
+  text-align: center;
+}
+.c{
+  line-height: 100rpx;
+  height: 100rpx;
+}
+.yd{
+  position: fixed;
+  bottom: 150rpx;
+  margin-left: 23%;
+  font-size: 25rpx;
+}
+.active{
+ background: #cbd585;
+}

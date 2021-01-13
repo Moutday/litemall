@@ -125,7 +125,8 @@
 					"id": 12,
 					"name": "商品",
 					"pathName": "pages/goods/goods",
-					"query": "id=1181003"
+					"query": "id=1057036",
+					"scene": null
 				},
 				{
 					"id": -1,
@@ -164,10 +165,11 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 19,
 					"name": "我的订单详情",
 					"pathName": "pages/ucenter/orderDetail/orderDetail",
-					"query": "id=1"
+					"query": "id=3",
+					"scene": null
 				},
 				{
 					"id": 22,
@@ -310,6 +312,20 @@
 					"name": "售后详情",
 					"pathName": "pages/ucenter/aftersaleDetail/aftersaleDetail",
 					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/ucenter/indexNew/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 44,
+					"name": "特权卡",
+					"pathName": "pages/ucenter/vipCard/index",
+					"query": "",
 					"scene": null
 				}
 			]

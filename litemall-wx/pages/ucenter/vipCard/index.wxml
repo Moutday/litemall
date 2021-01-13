@@ -1,0 +1,44 @@
+<view class="container">
+      <view class="a active">
+          <view class="b c">月度特权卡</view>
+          <view class="b">
+            <view>饮品折扣95%</view>
+            <view>赠送88积分</view>
+            <view>每月两张券限定养生茶系列</view>
+          </view>
+          <view class="b c">￥9.9/月</view>
+      </view>
+            <view class="a active">
+          <view class="b c">月度特权卡</view>
+          <view class="b">
+            <view>饮品折扣95%</view>
+            <view>赠送88积分</view>
+            <view>每月两张券限定养生茶系列</view>
+          </view>
+          <view class="b c">￥9.9/月</view>
+      </view>
+            <view class="a active">
+          <view class="b c">月度特权卡</view>
+          <view class="b">
+            <view>饮品折扣95%</view>
+            <view>赠送88积分</view>
+            <view>每月两张券限定养生茶系列</view>
+          </view>
+          <view class="b c">￥9.9/月</view>
+      </view>
+            <view class="a active">
+          <view class="b c">月度特权卡</view>
+          <view class="b">
+            <view>饮品折扣95%</view>
+            <view>赠送88积分</view>
+            <view>每月两张券限定养生茶系列</view>
+          </view>
+          <view class="b c">￥9.9/月</view>
+      </view>
+      <view class="yd">
+        <checkbox class="checkbox-3"></checkbox>
+        阅读并同意《特权服务协议》
+      </view>
+      <button type="primary" open-type="getUserInfo" class="wx-login-btn" bindgetuserinfo="wxLogin">微信支付</button>
+
+</view>

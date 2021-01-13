@@ -19,6 +19,9 @@
 .ranking-hot{
   display:flex;
 }
+.hot-name{
+  font-size:24rpx;
+}
 .cart_icon {
   position:fixed;
   left: 0;
@@ -54,7 +57,7 @@
 float: left;
 }
 .home_vip{
-  width: 95%;
+  width: 99%;
   height: 168rpx;
   margin:20rpx;
 }
@@ -183,7 +186,8 @@ width:370rpx;
 }
 .ranking_photo{
   height: 125rpx;
-  width: 165rpx;
+  width: 145rpx;
+  margin-right: 10rpx;
 }
 
 .a-brand .mt .brand {

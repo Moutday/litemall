@@ -7,7 +7,6 @@ page {
 .container {
   background: #f4f4f4;
   height: auto;
-  overflow: hidden;
   width: 100%;
   padding-left: 24rpx;
   padding-right: 24rpx;
@@ -78,9 +77,20 @@ page {
   font-weight: 550;
   line-height: 86rpx;
   margin-left: 35rpx;
-  font-size: 30rpx;
+  font-size: 32rpx;
   letter-spacing: 1rpx;
   color: #000000;
+}
+
+.user_row_right_tj{
+  float: right;
+}
+.tj{
+  font-size: 28rpx;
+}
+.recommend_photo{
+height: 218rpx;
+width: 218rpx;
 }
 
 .user_row_right {
@@ -131,7 +141,7 @@ page {
   /* border: 1px solid black; */
   margin-top: 5rpx;
   font-size: 24rpx;
-  color: #333333;
+  color: #000000;
 }
 
 .separate {
@@ -190,3 +200,118 @@ page {
   color: #666666;
   margin-left:-10rpx;
 }
+.refresh_icon{
+ height: 25rpx;
+  width: 25rpx;
+}
+.left{
+  text-align:left;
+}
+.price{
+color:#f95731;
+}
+
+
+
+/* 规则提示层  */
+.isRuleShowTip{
+    display: block;
+}
+.isRuleHideTip{
+    display: none;
+}
+.ruleZhezhaoTip{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color:rgba(0, 0, 0, .5);
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.ruleZhezhaoContentTip{
+    padding: 20rpx 0;
+    background: #fff;
+    display: flex;
+    /* flex-direction: column;
+    justify-content: space-around;
+    align-items: center; */
+    position: relative;
+}
+.ruleHideTip{
+    height: 60rpx!important;
+    width: 60rpx!important;
+    position: absolute;
+    top: -20rpx;
+    right: -20rpx;
+}
+.ruleTip{
+    display: block;
+    border: 1px solid #fff;
+    width: 100rpx;
+    text-align: center;
+    line-height: 60rpx;
+    color: #fff;
+    height: 60rpx;
+    font-size: 30rpx;
+    border-radius: 30rpx;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+
+.desc{
+  background: #fff;
+  margin: -1rpx 30rpx 0 30rpx;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow:auto;
+  overflow-x:hidden;
+font-size:23rpx;
+line-height:38rpx;
+border-bottom-left-radius:15rpx;
+border-bottom-right-radius:15rpx;
+
+  }
+.desc1{
+  font-size: 24rpx;
+}
+.dhv{
+  width: 100%;
+  text-align: center;
+  margin-bottom:7%;
+  margin-top:4%;
+}
+.d-hearder{
+  margin: 0 30rpx;
+  height: 600rpx;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 315rpx;
+  text-align: center;
+}
+.hym-tip{
+    color: #000000;
+    font-size:40rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+}
+.hym{
+    color: #000000;
+    font-size:30rpx;
+}
+.nclose-tip{
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+
+.tipv{
+  text-align: center;
+}
+.code{
+  width: 260rpx;
+  height: 260rpx;
+  margin-top: 60rpx;
+}
+/* 规则提示层  */

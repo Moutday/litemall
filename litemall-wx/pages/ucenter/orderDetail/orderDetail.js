@@ -199,6 +199,18 @@ Page({
       util.redirect('/pages/ucenter/aftersaleDetail/aftersaleDetail?id=' + this.data.orderId);
     }
   },
+  //打开规则提示
+  showTipRule: function () {
+      this.setData({
+          isRuleTipTrue: true
+      })
+  },
+  //关闭规则提示
+  hideTipRule: function () {
+      this.setData({
+          isRuleTipTrue: false,
+      })
+  },
   onReady: function() {
     // 页面渲染完成
   },

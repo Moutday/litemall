@@ -46,21 +46,21 @@
           <view class="hot-sec flex">
             <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
             <view>
-              <view>红糖生姜饮</view>             
+              <view class="hot-name">红糖生姜饮</view>             
               <view class="ffa478">￥12.00</view>
             </view>
           </view>
           <view class="hot-sec flex">
             <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
             <view>
-              <view>红糖生姜饮</view>             
+              <view class="hot-name">红糖生姜饮</view>             
               <view class="ffa478">￥12.00</view>
             </view>
           </view>
           <view class="hot-sec flex">
             <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
             <view>
-              <view>红糖生姜饮</view>             
+              <view class="hot-name">红糖生姜饮</view>             
               <view class="ffa478">￥12.00</view>
             </view>
           </view>
@@ -70,21 +70,21 @@
           <view class="hot-sec flex">
             <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
             <view>
-              <view>红糖生姜饮</view>             
+              <view class="hot-name">红糖生姜饮</view>             
               <view class="ffa478">￥12.00</view>
             </view>
           </view>
           <view class="hot-sec flex">
             <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
             <view>
-              <view>红糖生姜饮</view>             
+              <view class="hot-name">红糖生姜饮</view>             
               <view class="ffa478">￥12.00</view>
             </view>
           </view>
           <view class="hot-sec flex">
             <image src="/static/images/new/ranking_photo.png" background-size="cover" class="ranking_photo"></image>
             <view>
-              <view>红糖生姜饮</view>             
+              <view class="hot-name">红糖生姜饮</view>             
               <view class="ffa478">￥12.00</view>
             </view>
           </view>
@@ -120,5 +120,6 @@
   </view>
 </view>
 
-
-<image src="/static/images/new/shopping_icon.png" background-size="cover" class="cart_icon"></image>
+<navigator url="/pages/cart/cart">
+  <image src="/static/images/new/shopping_icon.png" background-size="cover" class="cart_icon"></image>
+</navigator>

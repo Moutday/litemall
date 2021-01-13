@@ -24,14 +24,14 @@ page {
   height: 82rpx;
   padding: 0 20rpx;
   line-height: 82rpx;
-  color: #9a9ba1;
+  color: #000000;
   font-size: 30rpx;
   width: 170rpx;
 }
 
 .orders-switch .item.active .txt {
-  color: #ab956d;
-  border-bottom: 4rpx solid #ab956d;
+  color: #000000;
+  border-bottom: 4rpx solid #778325;
 }
 
 .no-order {
@@ -163,4 +163,12 @@ page {
   font-size: 28rpx;
   color: #fff;
   background: #b4282d;
+}
+.b-desc{
+  position: fixed;
+  bottom: 40rpx;
+  color: #999999;
+  font-size: 25rpx;
+  width: 100%;
+  text-align: center;
 }

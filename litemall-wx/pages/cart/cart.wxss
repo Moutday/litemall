@@ -29,7 +29,6 @@ page {
   display: flex;
   align-items: center;
   font-size: 25rpx;
-  color: #666;
 }
 
 .no-login {
@@ -174,8 +173,8 @@ page {
   height: 28rpx;
   max-width: 310rpx;
   line-height: 28rpx;
-  font-size: 25rpx;
-  color: #333;
+  font-size: 27rpx;
+  color: #000000;
   overflow: hidden;
 }
 
@@ -331,6 +330,7 @@ page {
   width: 100%;
   background: #fff;
   display: flex;
+  z-index: 1000;
 }
 
 .cart-bottom .van-checkbox {
@@ -429,7 +429,7 @@ page {
   border-top-right-radius: 50rpx;
   border-bottom-right-radius: 50rpx;
   letter-spacing: 3rpx;
-  background-image: linear-gradient(to right, #9a9ba1 0%, #9a9ba1 100%);
+  background-image: linear-gradient(to right, #778325 0%, #778325 100%);
 }
 
 .action_btn_area .delete {
@@ -490,3 +490,133 @@ page {
   letter-spacing: 3rpx;
   background-image: linear-gradient(to right, #8baaaa 0%, #9a9ba1 100%);
 }
+.price-color{
+  color: #f95731;
+}
+.notice_icon{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+.arrow_icon_grey{
+  width: 18rpx;
+  height: 18rpx;
+  margin-left: 5rpx;
+}
+.mm{
+  color: #999999;
+}
+
+
+/*推荐*/
+.user_row_sec{
+  margin-top:20rpx;
+  background:#fff;
+  margin-bottom: 150rpx;
+}
+.user_row {
+  /* border: 1px solid black; */
+  height: 86rpx;
+  line-height: 86rpx;
+  border-bottom: 1px solid #fafafa;
+  background:#fff;
+
+}
+
+.user_row_left {
+  /* border: 1px solid #757575; */
+  float: left;
+  height: 86rpx;
+  font-weight: 550;
+  line-height: 86rpx;
+  margin-left: 35rpx;
+  font-size: 32rpx;
+  letter-spacing: 1rpx;
+  color: #000000;
+}
+
+.user_row_right_tj{
+  float: right;
+  margin-right: 20rpx;
+}
+.tj{
+  font-size: 28rpx;
+}
+.recommend_photo{
+height: 218rpx;
+width: 218rpx;
+}
+
+.user_row_right {
+  /* border: 1px solid #757575; */
+  float: right;
+  height: 40rpx;
+  width: 40rpx;
+  font-weight: 550;
+  line-height: 86rpx;
+  margin-top: 28rpx;
+  margin-right: 30rpx;
+}
+
+.user_column {
+  /* border: 1px solid black; */
+  height: 305rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_column_item {
+  width: 33%;
+  height: 285rpx;
+  background: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.user_column_item_badge {
+  height: 28rpx;
+  width: 28rpx;
+  position: absolute;
+  background: #b4282d;
+  color: #fff;
+  border-radius: 50%;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+}
+
+.user_column_item_image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 30rpx;
+}
+
+.user_column_item_text {
+  /* border: 1px solid black; */
+  margin-top: 5rpx;
+  font-size: 24rpx;
+  color: #000000;
+}
+
+.recommend_photo{
+height: 218rpx;
+width: 218rpx;
+}
+.user_row_right {
+  /* border: 1px solid #757575; */
+  float: right;
+  height: 40rpx;
+  width: 40rpx;
+  font-weight: 550;
+  line-height: 86rpx;
+  margin-top: 28rpx;
+  margin-right: 30rpx;
+}
+.refresh_icon{
+ height: 25rpx;
+  width: 25rpx;
+}
+.left{
+  text-align:left;
+}
+/*推荐*/

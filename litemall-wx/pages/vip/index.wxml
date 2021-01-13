@@ -1,0 +1,5 @@
+<view class="container">
+      <image src="/static/images/vip/head.png" background-size="cover" class="head"></image>
+      <image src="/static/images/vip/birth.png" background-size="cover" class="birth"></image>
+      <image src="/static/images/vip/vip_detail.png" background-size="cover" class="vip_detail"></image>
+</view>

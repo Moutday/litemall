@@ -13,7 +13,7 @@
       <view class="txt">待收货</view>
     </view>
     <view class="item {{ showType == 4 ? 'active' : ''}}" bindtap="switchTab" data-index='4'>
-      <view class="txt">待评价</view>
+      <view class="txt">已完成</view>
     </view>
   </view>
   <view class="no-order" wx:if="{{orderList.length <= 0}}">
@@ -43,4 +43,6 @@
       </view>
     </navigator>
   </view>
+
+  <view class="b-desc">仅展示近半年的订单~</view>
 </view>

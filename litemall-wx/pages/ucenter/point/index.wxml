@@ -1,0 +1,14 @@
+<view class="container">
+        <view class="profile-info">
+            <image class="avatar" wx:if="{{!userInfo.nickName}}" src="/static/images/new/head_icon.png"></image>
+          <view class="info">
+            <text class="name" wx:if="{{!userInfo.nickName}}">用户昵称</text>
+            <image class='crown_icon' src='/static/images/new/crown_icon.png'></image><text class="sq">金卡</text>
+          </view>
+          <view>
+            <view><image class='integral_icon' src='/static/images/new/integral_icon.png'></image>500</view>
+            <view class='user_column_item_text hym'>获取积分</view>
+          </view>
+        </view>
+        <image class='upgrading_icon' src='/static/images/new/upgrading_icon.png'></image>
+</view>

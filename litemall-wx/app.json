@@ -2,7 +2,8 @@
   "pages": [
     "pages/newIndex/index",
     "pages/ucenter/vipCard/index",
-    "pages/vip/index", 
+    "pages/ucenter/point/index",
+    "pages/vip/index",
     "pages/index/index",
     "pages/catalog/catalog",
     "pages/newGoods/newGoods",

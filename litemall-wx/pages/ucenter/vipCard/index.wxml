@@ -39,6 +39,6 @@
         <checkbox class="checkbox-3"></checkbox>
         阅读并同意《特权服务协议》
       </view>
-      <button type="primary" open-type="getUserInfo" class="wx-login-btn" bindgetuserinfo="wxLogin">微信支付</button>
+      <button type="primary" class="wx-login-btn" bindtap="submitOrder">微信支付</button>
 
 </view>

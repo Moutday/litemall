@@ -1,12 +1,12 @@
 page {
-  background: #f4f4f4;
+  background: #f5f5f5;
   min-height: 100%;
 }
 
 .container {
-  background: #f4f4f4;
+  background: #f5f5f5;
   min-height: 100%;
-  padding-top: 30rpx;
+  padding: 30rpx;
 }
 
 .coupon-list {
@@ -17,16 +17,17 @@ page {
 
 .unselect {
   height: 80rpx;
-  border: none;
-  width: 700rpx;
-  background: #28b43b;
-  color: #fff;
+  width: 660rpx;
+  background: #ffffff;
+  color: #999999;
   font-size: 40rpx;
   text-align: center;
   margin-bottom: 30rpx;
   margin-left: 30rpx;
   margin-right: 30rpx;
   line-height: 80rpx;
+  border-radius: 60rpx;
+  border: 1rpx solid #999999;
 }
 
 .item {

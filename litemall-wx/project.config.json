@@ -327,6 +327,13 @@
 					"pathName": "pages/ucenter/vipCard/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分",
+					"pathName": "pages/ucenter/point/index",
+					"query": "id=1057036",
+					"scene": null
 				}
 			]
 		}

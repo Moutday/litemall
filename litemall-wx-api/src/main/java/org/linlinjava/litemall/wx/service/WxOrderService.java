@@ -111,7 +111,8 @@ public class WxOrderService {
     private LitemallUserPointDetailService userPointDetailService;
     @Autowired
     private LitemallUserCardService userCardService;
-
+    @Autowired
+    private SuperCardService superCardService;
 
 
     /**
@@ -490,6 +491,77 @@ public class WxOrderService {
         return ResponseUtil.ok(data);
     }
 
+
+    /**
+     * 提交订单
+     * <p>
+     * 1. 创建订单表项和订单商品表项;
+     * 2. 购物车清空;
+     * 3. 优惠券设置已用;
+     * 4. 商品货品库存减少;
+     * 5. 如果是团购商品，则创建团购活动表项。
+     *
+     * @param userId 用户ID
+     * @return 提交订单操作结果
+     */
+    @Transactional
+    public Object submitCardOrder(Integer userId, Integer cardId) {
+        if (userId == null) {
+            return ResponseUtil.unlogin();
+        }
+        if (cardId == null) {
+            return ResponseUtil.badArgument();
+        }
+        LitemallVipCard card = superCardService.findById(cardId);
+        // 最终支付费用
+        BigDecimal actualPrice = new BigDecimal(card.getPrice());
+
+        Integer orderId = null;
+        LitemallOrder order = null;
+        // 订单
+        order = new LitemallOrder();
+        order.setUserId(userId);
+        order.setOrderSn(orderService.generateOrderSn(userId));
+        order.setOrderStatus(OrderUtil.STATUS_CREATE);
+        order.setConsignee("");
+        order.setMobile("");
+        order.setMessage("");
+        order.setAddress("");
+        order.setGoodsPrice(actualPrice);
+        order.setFreightPrice(new BigDecimal(0));
+        order.setCouponPrice(new BigDecimal(0));
+        order.setIntegralPrice(new BigDecimal(0));
+        order.setOrderPrice(actualPrice);
+        order.setActualPrice(actualPrice);
+        order.setIsCard(true);
+        order.setGrouponPrice(new BigDecimal(0));    //  团购价格
+
+        // 添加订单表项
+        orderService.add(order);
+        orderId = order.getId();
+
+        // 添加订单商品表项
+        // 订单商品 特权卡
+        LitemallOrderGoods orderGoods = new LitemallOrderGoods();
+            orderGoods.setOrderId(order.getId());
+            orderGoods.setGoodsId(card.getId());
+            orderGoods.setGoodsSn("");
+            orderGoods.setGoodsName("");
+            orderGoods.setPicUrl("");
+            orderGoods.setPrice(actualPrice);
+            String[] testArray = new String[]{"0"};
+            orderGoods.setSpecifications(testArray);
+            orderGoods.setAddTime(LocalDateTime.now());
+            orderGoodsService.add(orderGoods);
+        // 订单支付超期任务
+        taskService.addTask(new OrderUnpaidTask(orderId));
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("orderId", orderId);
+        data.put("grouponLinkId", 0);
+        return ResponseUtil.ok(data);
+    }
+
     /**
      * 取消订单
      * <p>
@@ -769,9 +841,9 @@ public class WxOrderService {
 
         //TODO 发送邮件和短信通知，这里采用异步发送
         // 订单支付成功以后，会发送短信给用户，以及发送邮件给管理员
-        notifyService.notifyMail("新订单通知", order.toString());
+        //notifyService.notifyMail("新订单通知", order.toString());
         // 这里微信的短信平台对参数长度有限制，所以将订单号只截取后6位
-        notifyService.notifySmsTemplateSync(order.getMobile(), NotifyType.PAY_SUCCEED, new String[]{orderSn.substring(8, 14)});
+        //notifyService.notifySmsTemplateSync(order.getMobile(), NotifyType.PAY_SUCCEED, new String[]{orderSn.substring(8, 14)});
 
         // 请依据自己的模版消息配置更改参数
         String[] parms = new String[]{
@@ -792,28 +864,36 @@ public class WxOrderService {
 
     //判断用户等级 增加积分
     //到达段积分 升级用户
+    //vip卡订单送积分
+    //toDO:到达等级马上发放优惠券？？
     private void givePointToUser(LitemallOrder order){
         LitemallUser user = userService.findById(order.getUserId());
-        LitemallUserCard card = userCardService.findByCardLevel(user.getCardLevel());
-        LitemallUserPointDetail userPointDetail = new LitemallUserPointDetail();
-        Integer addPoint = Integer.parseInt(order.getActualPrice().toString()) * card.getMultiple();
+        if(order.getIsCard()){//特权卡订单 更新用户特权卡id
+            List<LitemallOrderGoods> orderGoodsList = orderGoodsService.queryByOid(order.getId());
+            Integer vipCardId = orderGoodsList.get(0).getGoodsId();
+            LitemallVipCard vipCard = superCardService.findById(vipCardId);
+            user.setPoint(user.getPoint() + vipCard.getPoint());
+            user.setVipCardId(vipCardId);
+        }else{
+            LitemallUserCard card = userCardService.findByCardLevel(user.getCardLevel());
+            LitemallUserPointDetail userPointDetail = new LitemallUserPointDetail();
+            Integer addPoint = Integer.parseInt(order.getActualPrice().toString()) * card.getMultiple();
 
-        userPointDetail.setOrderId(order.getId());
-        userPointDetail.setPoint(addPoint);
-        userPointDetail.setUserId(order.getUserId());
-        userPointDetailService.add(userPointDetail);
-
-        user.setPoint(user.getPoint() + addPoint);
-        userService.updateById(user);
-
+            userPointDetail.setOrderId(order.getId());
+            userPointDetail.setPoint(addPoint);
+            userPointDetail.setUserId(order.getUserId());
+            userPointDetailService.add(userPointDetail);
+            user.setPoint(user.getPoint() + addPoint);
+        }
         //升级用户会员等级
         List<LitemallUserCard> cardList = userCardService.querySelective(null,0,"","");
         cardList.forEach(c->
         {
-            if(user.getPoint() >= card.getPointBegin() && user.getPoint() <= card.getPointEnd()){
-                user.setCardLevel(card.getCardLevel());
+            if(user.getPoint() >= c.getPointBegin() && user.getPoint() <= c.getPointEnd()){
+                user.setCardLevel(c.getCardLevel());
             }
         });
+        userService.updateById(user);
     }
 
     /**

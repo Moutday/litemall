@@ -145,8 +145,8 @@ public class WxAuthController {
             user.setAvatar(userInfo.getAvatarUrl());
             user.setNickname(userInfo.getNickName());
             user.setGender(userInfo.getGender());
-            user.setUserLevel((byte) 0);
-            user.setStatus((byte) 0);
+            user.setUserLevel(0);
+            user.setStatus(0);
             user.setLastLoginTime(LocalDateTime.now());
             user.setLastLoginIp(IpUtil.getIpAddr(request));
             user.setSessionKey(sessionKey);
@@ -300,9 +300,9 @@ public class WxAuthController {
         user.setWeixinOpenid(openId);
         user.setAvatar("https://yanxuan.nosdn.127.net/80841d741d7fa3073e0ae27bf487339f.jpg?imageView&quality=90&thumbnail=64x64");
         user.setNickname(username);
-        user.setGender((byte) 0);
-        user.setUserLevel((byte) 0);
-        user.setStatus((byte) 0);
+        user.setGender((byte)0);
+        user.setUserLevel(0);
+        user.setStatus(0);
         user.setLastLoginTime(LocalDateTime.now());
         user.setLastLoginIp(IpUtil.getIpAddr(request));
         userService.add(user);

@@ -554,7 +554,7 @@ public class LitemallUserCard {
      */
     public enum Column {
         id("id", "id", "INTEGER", false),
-        cardLevel("card_level", "cardLevel", "TINYINT", false),
+        cardLevel("card_level", "cardLevel", "INTEGER", false),
         pointBegin("point_begin", "pointBegin", "INTEGER", false),
         pointEnd("point_end", "pointEnd", "INTEGER", false),
         multiple("multiple", "multiple", "INTEGER", false),

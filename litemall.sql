@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50726
 File Encoding         : 65001
 
-Date: 2021-01-08 19:47:31
+Date: 2021-01-16 17:46:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -3403,15 +3403,22 @@ CREATE TABLE `litemall_order` (
   `end_time` datetime DEFAULT NULL COMMENT '订单关闭时间',
   `add_time` datetime DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  `type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单类型 0送到餐桌 1打包带走 2外送',
+  `table_code` int(11) NOT NULL DEFAULT '0' COMMENT '餐桌号',
+  `shop_id` int(11) NOT NULL DEFAULT '0' COMMENT '自取、外送门店id',
+  `carry_now` int(11) NOT NULL DEFAULT '0' COMMENT '是否立即自取 0是 1否',
+  `carry_time` datetime DEFAULT NULL COMMENT '自取时间、外送预计送达时间',
+  `is_card` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否特权卡订单 0不是 1是',
   `deleted` tinyint(1) DEFAULT '0' COMMENT '逻辑删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
 
 -- ----------------------------
 -- Records of litemall_order
 -- ----------------------------
-INSERT INTO `litemall_order` VALUES ('1', '3', '20201214370548', '103', '0', '吴大大', '15800011111', '广东省广州市增城区 001', '', '123.00', '0.00', '10.00', '0.00', '0.00', '113.00', '113.00', null, null, null, null, null, null, null, null, null, null, '0', '2020-12-14 16:32:30', '2020-12-14 16:02:29', '2020-12-14 16:32:30', '0');
-INSERT INTO `litemall_order` VALUES ('2', '3', '20201214796722', '103', '0', '吴大大', '15800011111', '广东省广州市增城区 001', '', '198.00', '0.00', '10.00', '0.00', '0.00', '188.00', '188.00', null, null, null, null, null, null, null, null, null, null, '0', '2020-12-14 17:39:44', '2020-12-14 17:09:44', '2020-12-14 17:39:44', '0');
+INSERT INTO `litemall_order` VALUES ('1', '3', '20201214370548', '103', '0', '吴大大', '15800011111', '广东省广州市增城区 001', '', '123.00', '0.00', '10.00', '0.00', '0.00', '113.00', '113.00', null, null, null, null, null, null, null, null, null, null, '0', '2020-12-14 16:32:30', '2020-12-14 16:02:29', '2020-12-14 16:32:30', '0', '0', '0', '0', null, '0', '0');
+INSERT INTO `litemall_order` VALUES ('2', '3', '20201214796722', '103', '0', '吴大大', '15800011111', '广东省广州市增城区 001', '', '198.00', '0.00', '10.00', '0.00', '0.00', '188.00', '188.00', null, null, null, null, null, null, null, null, null, null, '0', '2020-12-14 17:39:44', '2020-12-14 17:09:44', '2020-12-14 17:39:44', '0', '0', '0', '0', null, '0', '0');
+INSERT INTO `litemall_order` VALUES ('4', '3', '20210115284767', '101', '0', '', '', '', '', '9.99', '0.00', '0.00', '0.00', '0.00', '9.99', '9.99', null, null, null, null, null, null, null, null, null, null, '0', null, '2021-01-15 12:58:43', '2021-01-15 12:58:44', '0', '0', '0', '0', null, '0', '0');
 
 -- ----------------------------
 -- Table structure for litemall_order_goods
@@ -3435,7 +3442,7 @@ CREATE TABLE `litemall_order_goods` (
   PRIMARY KEY (`id`),
   KEY `order_id` (`order_id`),
   KEY `goods_id` (`goods_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
 
 -- ----------------------------
 -- Records of litemall_order_goods
@@ -3443,6 +3450,7 @@ CREATE TABLE `litemall_order_goods` (
 INSERT INTO `litemall_order_goods` VALUES ('1', '1', '1116011', '蔓越莓曲奇 200克', '1116011', '167', '1', '36.00', '[\"标准\"]', 'http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png', '0', '2020-12-14 16:02:29', '2020-12-14 16:02:29', '0');
 INSERT INTO `litemall_order_goods` VALUES ('2', '1', '1127047', '趣味粉彩系列笔记本', '1127047', '182', '3', '29.00', '[\"标准\"]', 'http://yanxuan.nosdn.127.net/6c03ca93d8fe404faa266ea86f3f1e43.png', '0', '2020-12-14 16:02:29', '2020-12-14 16:02:29', '0');
 INSERT INTO `litemall_order_goods` VALUES ('3', '2', '1152031', '魔兽世界-伊利丹颈枕眼罩套装', '1152031', '234', '2', '99.00', '[\"标准\"]', 'http://yanxuan.nosdn.127.net/fd6e78a397bd9e9804116a36f0270b0a.png', '0', '2020-12-14 17:09:44', '2020-12-14 17:09:44', '0');
+INSERT INTO `litemall_order_goods` VALUES ('4', '4', '1', '', '', '0', '0', '9.99', '[\"0\"]', '', '0', '2021-01-15 12:58:43', '2021-01-15 12:58:43', '0');
 
 -- ----------------------------
 -- Table structure for litemall_permission
@@ -6809,26 +6817,6 @@ CREATE TABLE `litemall_storage` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for litemall_super_vip_card
--- ----------------------------
-DROP TABLE IF EXISTS `litemall_super_vip_card`;
-CREATE TABLE `litemall_super_vip_card` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `price` double(10,2) DEFAULT NULL COMMENT '价格',
-  `type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1月度 2季度 3年度 4终身',
-  `discount` int(11) NOT NULL DEFAULT '0' COMMENT '折扣',
-  `coupon_ids` varchar(100) NOT NULL DEFAULT '' COMMENT '关联优惠券',
-  `point` int(11) NOT NULL DEFAULT '0' COMMENT '赠送积分',
-  `add_time` datetime DEFAULT NULL COMMENT '创建时间',
-  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='特权卡';
-
--- ----------------------------
--- Records of litemall_super_vip_card
--- ----------------------------
-
--- ----------------------------
 -- Table structure for litemall_system
 -- ----------------------------
 DROP TABLE IF EXISTS `litemall_system`;
@@ -6921,7 +6909,7 @@ CREATE TABLE `litemall_user` (
   `birthday` date DEFAULT NULL COMMENT '生日',
   `last_login_time` datetime DEFAULT NULL COMMENT '最近一次登录时间',
   `last_login_ip` varchar(63) NOT NULL DEFAULT '' COMMENT '最近一次登录IP地址',
-  `user_level` tinyint(3) DEFAULT '0' COMMENT '0 普通用户，1 VIP用户，2 高级VIP用户',
+  `user_level` int(3) DEFAULT '0' COMMENT '0 普通用户，1 VIP用户，2 高级VIP用户',
   `nickname` varchar(63) NOT NULL DEFAULT '' COMMENT '用户昵称或网络名称',
   `mobile` varchar(20) NOT NULL DEFAULT '' COMMENT '用户手机号码',
   `avatar` varchar(255) NOT NULL DEFAULT '' COMMENT '用户头像图片',
@@ -6930,7 +6918,10 @@ CREATE TABLE `litemall_user` (
   `point` int(11) DEFAULT '0' COMMENT '用户总积分',
   `card_level` int(11) NOT NULL DEFAULT '0' COMMENT '会员卡等级',
   `vip_card_id` int(11) DEFAULT '0' COMMENT '特权卡id',
-  `status` tinyint(3) NOT NULL DEFAULT '0' COMMENT '0 可用, 1 禁用, 2 注销',
+  `vip_start_time` datetime DEFAULT NULL COMMENT 'vip卡开始时间',
+  `vip_end_time` datetime DEFAULT NULL COMMENT 'vip卡过期时间',
+  `is_expire` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0未到期 1已过期',
+  `status` int(3) NOT NULL DEFAULT '0' COMMENT '0 可用, 1 禁用, 2 注销',
   `add_time` datetime DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `deleted` tinyint(1) DEFAULT '0' COMMENT '逻辑删除',
@@ -6941,8 +6932,8 @@ CREATE TABLE `litemall_user` (
 -- ----------------------------
 -- Records of litemall_user
 -- ----------------------------
-INSERT INTO `litemall_user` VALUES ('1', 'user123', '$2a$10$lTu9qi0hr19OC800Db.eludFr0AXuJUSrMHi/iPYhKRlPFeqJxlye', '1', null, '2019-04-20 22:17:43', '0:0:0:0:0:0:0:1', '0', 'user123', '', '', '', '', '0', '0', '0', '0', '2019-04-20 22:17:43', '2019-04-20 22:17:43', '0');
-INSERT INTO `litemall_user` VALUES ('3', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', '1', null, '2020-12-14 16:00:25', '10.200.101.109', '0', '吴窝。??', '', 'https://thirdwx.qlogo.cn/mmopen/vi_32/5LjBibnE7thhvEfV1T7lribwdEvhlqiciaIvCfoYlrJoxVwmvPwhf2BlCOoM2BIUM3uJiaOrHzmKTZm6fsGzojTEuOw/132', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', 'MdDVf3j4zBO1C0hy2I+8+Q==', '0', '2', '0', '0', '2020-12-14 16:00:25', '2020-12-14 16:00:25', '0');
+INSERT INTO `litemall_user` VALUES ('1', 'user123', '$2a$10$lTu9qi0hr19OC800Db.eludFr0AXuJUSrMHi/iPYhKRlPFeqJxlye', '1', null, '2019-04-20 22:17:43', '0:0:0:0:0:0:0:1', '0', 'user123', '', '', '', '', '0', '0', '0', null, null, '0', '0', '2019-04-20 22:17:43', '2019-04-20 22:17:43', '0');
+INSERT INTO `litemall_user` VALUES ('3', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', '1', null, '2021-01-15 12:54:20', '10.200.101.109', '0', '吴窝。??', '', 'https://thirdwx.qlogo.cn/mmopen/vi_32/5LjBibnE7thhvEfV1T7lribwdEvhlqiciaIvCfoYlrJoxVwmvPwhf2BlCOoM2BIUM3uJiaOrHzmKTZm6fsGzojTEuOw/132', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', 'TXePAchZy9ddvHHDamAoXA==', '0', '2', '0', null, null, '0', '0', '2020-12-14 16:00:25', '2021-01-15 12:54:20', '0');
 
 -- ----------------------------
 -- Table structure for litemall_user_card
@@ -6950,7 +6941,7 @@ INSERT INTO `litemall_user` VALUES ('3', 'oIsLu4uRtOp0d4XJR_9wE54_reZ0', 'oIsLu4
 DROP TABLE IF EXISTS `litemall_user_card`;
 CREATE TABLE `litemall_user_card` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `card_level` tinyint(3) DEFAULT '0' COMMENT '0 普通用户，1 银卡，2 金卡，3 白卡，4 黑卡',
+  `card_level` int(3) DEFAULT '0' COMMENT '0 普通用户，1 银卡，2 金卡，3 白卡，4 黑卡',
   `point_begin` int(11) NOT NULL DEFAULT '0' COMMENT '积分范围开始',
   `point_end` int(11) NOT NULL DEFAULT '0' COMMENT '积分范围结束',
   `multiple` int(11) NOT NULL DEFAULT '0' COMMENT '获得积分倍数',
@@ -6991,3 +6982,26 @@ CREATE TABLE `litemall_user_point_detail` (
 -- ----------------------------
 -- Records of litemall_user_point_detail
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for litemall_vip_card
+-- ----------------------------
+DROP TABLE IF EXISTS `litemall_vip_card`;
+CREATE TABLE `litemall_vip_card` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `price` double(10,2) DEFAULT NULL COMMENT '价格',
+  `type` int(1) NOT NULL DEFAULT '0' COMMENT '1月度 2季度 3年度 4终身',
+  `discount` int(11) NOT NULL DEFAULT '0' COMMENT '折扣',
+  `coupon_ids` varchar(100) NOT NULL DEFAULT '' COMMENT '关联优惠券',
+  `point` int(11) NOT NULL DEFAULT '0' COMMENT '赠送积分',
+  `desc` text COMMENT '描述',
+  `add_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COMMENT='特权卡';
+
+-- ----------------------------
+-- Records of litemall_vip_card
+-- ----------------------------
+INSERT INTO `litemall_vip_card` VALUES ('1', '9.99', '1', '95', '1,1', '88', null, '2021-01-15 19:33:34', '2021-02-15 19:33:37');
+INSERT INTO `litemall_vip_card` VALUES ('2', '29.90', '2', '90', '1,1', '188', null, '2021-01-15 19:35:00', '2021-04-15 19:35:03');

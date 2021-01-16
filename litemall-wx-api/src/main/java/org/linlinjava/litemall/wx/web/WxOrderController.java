@@ -68,6 +68,11 @@ public class WxOrderController {
         return wxOrderService.submit(userId, body);
     }
 
+    @GetMapping("submitCardOrder")
+    public Object submitCardOrder(@LoginUser Integer userId,@RequestParam(defaultValue = "1") Integer cardId) {
+        return wxOrderService.submitCardOrder(userId, cardId);
+    }
+
     /**
      * 取消订单
      *

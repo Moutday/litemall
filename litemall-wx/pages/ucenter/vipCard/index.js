@@ -37,14 +37,8 @@ Page({
   },
   submitOrder: function() {
         util.request(api.OrderSubmit, {
-            cartId: 0,
-            addressId: 0,
-            couponId: 0,
-            userCouponId: 0,
-            message: "",
-            grouponRulesId: 0,
-            grouponLinkId: 0
-        }, 'POST').then(res => {
+            cardId: 1
+        }, 'GET').then(res => {
             if (res.errno === 0) {
 
             const orderId = res.data.orderId;

@@ -36,6 +36,12 @@
     <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
     <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="type" jdbcType="BIT" property="type" />
+    <result column="table_code" jdbcType="INTEGER" property="tableCode" />
+    <result column="shop_id" jdbcType="INTEGER" property="shopId" />
+    <result column="carry_now" jdbcType="INTEGER" property="carryNow" />
+    <result column="carry_time" jdbcType="TIMESTAMP" property="carryTime" />
+    <result column="is_card" jdbcType="BIT" property="isCard" />
     <result column="deleted" jdbcType="BIT" property="deleted" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -113,7 +119,7 @@
     message, goods_price, freight_price, coupon_price, integral_price, groupon_price, 
     order_price, actual_price, pay_id, pay_time, ship_sn, ship_channel, ship_time, refund_amount, 
     refund_type, refund_content, refund_time, confirm_time, comments, end_time, add_time, 
-    update_time, deleted
+    update_time, `type`, table_code, shop_id, carry_now, carry_time, is_card, deleted
   </sql>
   <select id="selectByExample" parameterType="org.linlinjava.litemall.db.domain.LitemallOrderExample" resultMap="BaseResultMap">
     <!--
@@ -243,7 +249,9 @@
       ship_channel, ship_time, refund_amount, 
       refund_type, refund_content, refund_time, 
       confirm_time, comments, end_time, 
-      add_time, update_time, deleted
+      add_time, update_time, `type`, 
+      table_code, shop_id, carry_now, 
+      carry_time, is_card, deleted
       )
     values (#{userId,jdbcType=INTEGER}, #{orderSn,jdbcType=VARCHAR}, #{orderStatus,jdbcType=SMALLINT}, 
       #{aftersaleStatus,jdbcType=SMALLINT}, #{consignee,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, 
@@ -254,7 +262,9 @@
       #{shipChannel,jdbcType=VARCHAR}, #{shipTime,jdbcType=TIMESTAMP}, #{refundAmount,jdbcType=DECIMAL}, 
       #{refundType,jdbcType=VARCHAR}, #{refundContent,jdbcType=VARCHAR}, #{refundTime,jdbcType=TIMESTAMP}, 
       #{confirmTime,jdbcType=TIMESTAMP}, #{comments,jdbcType=SMALLINT}, #{endTime,jdbcType=TIMESTAMP}, 
-      #{addTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=BIT}
+      #{addTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{type,jdbcType=BIT}, 
+      #{tableCode,jdbcType=INTEGER}, #{shopId,jdbcType=INTEGER}, #{carryNow,jdbcType=INTEGER}, 
+      #{carryTime,jdbcType=TIMESTAMP}, #{isCard,jdbcType=BIT}, #{deleted,jdbcType=BIT}
       )
   </insert>
   <insert id="insertSelective" parameterType="org.linlinjava.litemall.db.domain.LitemallOrder">
@@ -354,6 +364,24 @@
       <if test="updateTime != null">
         update_time,
       </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="tableCode != null">
+        table_code,
+      </if>
+      <if test="shopId != null">
+        shop_id,
+      </if>
+      <if test="carryNow != null">
+        carry_now,
+      </if>
+      <if test="carryTime != null">
+        carry_time,
+      </if>
+      <if test="isCard != null">
+        is_card,
+      </if>
       <if test="deleted != null">
         deleted,
       </if>
@@ -445,6 +473,24 @@
       </if>
       <if test="updateTime != null">
         #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=BIT},
+      </if>
+      <if test="tableCode != null">
+        #{tableCode,jdbcType=INTEGER},
+      </if>
+      <if test="shopId != null">
+        #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="carryNow != null">
+        #{carryNow,jdbcType=INTEGER},
+      </if>
+      <if test="carryTime != null">
+        #{carryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isCard != null">
+        #{isCard,jdbcType=BIT},
       </if>
       <if test="deleted != null">
         #{deleted,jdbcType=BIT},
@@ -558,6 +604,24 @@
       <if test="record.updateTime != null">
         update_time = #{record.updateTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.type != null">
+        `type` = #{record.type,jdbcType=BIT},
+      </if>
+      <if test="record.tableCode != null">
+        table_code = #{record.tableCode,jdbcType=INTEGER},
+      </if>
+      <if test="record.shopId != null">
+        shop_id = #{record.shopId,jdbcType=INTEGER},
+      </if>
+      <if test="record.carryNow != null">
+        carry_now = #{record.carryNow,jdbcType=INTEGER},
+      </if>
+      <if test="record.carryTime != null">
+        carry_time = #{record.carryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.isCard != null">
+        is_card = #{record.isCard,jdbcType=BIT},
+      </if>
       <if test="record.deleted != null">
         deleted = #{record.deleted,jdbcType=BIT},
       </if>
@@ -602,6 +666,12 @@
       end_time = #{record.endTime,jdbcType=TIMESTAMP},
       add_time = #{record.addTime,jdbcType=TIMESTAMP},
       update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      `type` = #{record.type,jdbcType=BIT},
+      table_code = #{record.tableCode,jdbcType=INTEGER},
+      shop_id = #{record.shopId,jdbcType=INTEGER},
+      carry_now = #{record.carryNow,jdbcType=INTEGER},
+      carry_time = #{record.carryTime,jdbcType=TIMESTAMP},
+      is_card = #{record.isCard,jdbcType=BIT},
       deleted = #{record.deleted,jdbcType=BIT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -701,6 +771,24 @@
       <if test="updateTime != null">
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="type != null">
+        `type` = #{type,jdbcType=BIT},
+      </if>
+      <if test="tableCode != null">
+        table_code = #{tableCode,jdbcType=INTEGER},
+      </if>
+      <if test="shopId != null">
+        shop_id = #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="carryNow != null">
+        carry_now = #{carryNow,jdbcType=INTEGER},
+      </if>
+      <if test="carryTime != null">
+        carry_time = #{carryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isCard != null">
+        is_card = #{isCard,jdbcType=BIT},
+      </if>
       <if test="deleted != null">
         deleted = #{deleted,jdbcType=BIT},
       </if>
@@ -742,6 +830,12 @@
       end_time = #{endTime,jdbcType=TIMESTAMP},
       add_time = #{addTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
+      `type` = #{type,jdbcType=BIT},
+      table_code = #{tableCode,jdbcType=INTEGER},
+      shop_id = #{shopId,jdbcType=INTEGER},
+      carry_now = #{carryNow,jdbcType=INTEGER},
+      carry_time = #{carryTime,jdbcType=TIMESTAMP},
+      is_card = #{isCard,jdbcType=BIT},
       deleted = #{deleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>

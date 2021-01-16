@@ -415,7 +415,7 @@ public class LitemallUserCardExample {
             return (Criteria) this;
         }
 
-        public Criteria andCardLevelNotEqualTo(Byte value) {
+        public Criteria andCardLevelNotEqualTo(Integer value) {
             addCriterion("card_level <>", value, "cardLevel");
             return (Criteria) this;
         }
@@ -431,7 +431,7 @@ public class LitemallUserCardExample {
             return (Criteria) this;
         }
 
-        public Criteria andCardLevelGreaterThan(Byte value) {
+        public Criteria andCardLevelGreaterThan(Integer value) {
             addCriterion("card_level >", value, "cardLevel");
             return (Criteria) this;
         }
@@ -447,7 +447,7 @@ public class LitemallUserCardExample {
             return (Criteria) this;
         }
 
-        public Criteria andCardLevelGreaterThanOrEqualTo(Byte value) {
+        public Criteria andCardLevelGreaterThanOrEqualTo(Integer value) {
             addCriterion("card_level >=", value, "cardLevel");
             return (Criteria) this;
         }
@@ -463,7 +463,7 @@ public class LitemallUserCardExample {
             return (Criteria) this;
         }
 
-        public Criteria andCardLevelLessThan(Byte value) {
+        public Criteria andCardLevelLessThan(Integer value) {
             addCriterion("card_level <", value, "cardLevel");
             return (Criteria) this;
         }
@@ -479,7 +479,7 @@ public class LitemallUserCardExample {
             return (Criteria) this;
         }
 
-        public Criteria andCardLevelLessThanOrEqualTo(Byte value) {
+        public Criteria andCardLevelLessThanOrEqualTo(Integer value) {
             addCriterion("card_level <=", value, "cardLevel");
             return (Criteria) this;
         }
@@ -495,22 +495,22 @@ public class LitemallUserCardExample {
             return (Criteria) this;
         }
 
-        public Criteria andCardLevelIn(List<Byte> values) {
+        public Criteria andCardLevelIn(List<Integer> values) {
             addCriterion("card_level in", values, "cardLevel");
             return (Criteria) this;
         }
 
-        public Criteria andCardLevelNotIn(List<Byte> values) {
+        public Criteria andCardLevelNotIn(List<Integer> values) {
             addCriterion("card_level not in", values, "cardLevel");
             return (Criteria) this;
         }
 
-        public Criteria andCardLevelBetween(Byte value1, Byte value2) {
+        public Criteria andCardLevelBetween(Integer value1, Integer value2) {
             addCriterion("card_level between", value1, value2, "cardLevel");
             return (Criteria) this;
         }
 
-        public Criteria andCardLevelNotBetween(Byte value1, Byte value2) {
+        public Criteria andCardLevelNotBetween(Integer value1, Integer value2) {
             addCriterion("card_level not between", value1, value2, "cardLevel");
             return (Criteria) this;
         }

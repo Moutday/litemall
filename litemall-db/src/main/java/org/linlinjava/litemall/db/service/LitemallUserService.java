@@ -86,6 +86,12 @@ public class LitemallUserService {
         return userMapper.selectByExample(example);
     }
 
+    public List<LitemallUser> queryByVipCardLevel(int vipCardLevel) {
+        LitemallUserExample example = new LitemallUserExample();
+        example.or().andVipCardIdEqualTo(vipCardLevel).andDeletedEqualTo(false);
+        return userMapper.selectByExample(example);
+    }
+
     public boolean checkByUsername(String username) {
         LitemallUserExample example = new LitemallUserExample();
         example.or().andUsernameEqualTo(username).andDeletedEqualTo(false);

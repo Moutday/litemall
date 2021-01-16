@@ -2,11 +2,11 @@
 // 本机开发时使用
  //var WxApiRoot = 'http://localhost:8080/wx/';
 // 局域网测试使用
-//var WxApiRoot = 'http://127.0.0.1:8082/wx/';
+var WxApiRoot = 'http://127.0.0.1:8082/wx/';
 // 云平台部署时使用
 // var WxApiRoot = 'http://122.51.199.160:8080/wx/';
 // 云平台上线时使用
-var WxApiRoot = 'https://yaoji.adbinstall.com/wx/';
+//var WxApiRoot = 'https://yaoji.adbinstall.com/wx/';
 
 module.exports = {
   IndexUrl: WxApiRoot + 'home/index', //首页数据接口
@@ -67,6 +67,7 @@ module.exports = {
   RegionList: WxApiRoot + 'region/list', //获取区域列表
 
   OrderSubmit: WxApiRoot + 'order/submit', // 提交订单
+  OrderSubmit: WxApiRoot + 'order/submitCardOrder', // 提交vip卡订单
   OrderPrepay: WxApiRoot + 'order/prepay', // 订单的预支付会话
   OrderList: WxApiRoot + 'order/list', //订单列表
   OrderDetail: WxApiRoot + 'order/detail', //订单详情
